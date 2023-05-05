@@ -1,0 +1,53 @@
+.Header{
+  width: 100vw;
+  height: 86px;
+  background-color: white;
+  position: fixed;
+}
+
+.Navbar{
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Logo{
+  height: 100%;
+  width: 86px;
+}
+
+.Navigation{
+  height: 100%;
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavLinks{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 85%;
+}
+
+.NavLinks > a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.NavIcons{
+  width: 100px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

@@ -1,0 +1,54 @@
+.HomeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.Banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Banner > img {
+  width: 100%;
+  height: 100%;
+  position: static;
+}
+
+.BannerContent {
+  width: 45%;
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  left: 10%;
+}
+
+.BannerContent > h1 {
+  font-size: 100px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.BannerContent > span {
+  width: 50%;
+  margin: 0;
+  display: block;
+}
+
+.BannerContent > span > p {
+  width: 100%;
+  margin: 0;
+}
+
+.BannerContent > p {
+  width: 50%;
+}
+
+.MainContent {
+
+}
