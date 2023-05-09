@@ -23,6 +23,7 @@
   width: 45%;
   font-size: 24px;
   font-weight: 300;
+  font-style: normal;
   position: absolute;
   left: 10%;
 }
@@ -35,7 +36,7 @@
 }
 
 .BannerContent > span {
-  width: 50%;
+  width: 59%;
   margin: 0;
   display: block;
 }
@@ -46,9 +47,139 @@
 }
 
 .BannerContent > p {
-  width: 50%;
+  width: 59%;
+}
+
+.ButtonHome {
+  background-color: #B08968;
+  color: white;
+  width: 370px;
+  height: 70px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18.5px;
+  border: none;
+  margin-top: 25px;
+}
+
+.NextBanner {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.NextBanner > div {
+  background-color: #686868;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-top: 60px;
+}
+
+.NextBanner > div:last-child{
+  background-color: #B08968;
 }
 
 .MainContent {
+  background-color: #EDE0D4;
+  position:relative;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 140vh;
+}
 
+.MainContent > h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.MainContentLatest {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.MainContentLatest > div {
+  height: 360px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.MainContentLatest > div > img {
+  height: 240px;
+  width: 240px;
+}
+
+.MainContentLatest > div > span {
+  height: 50px;
+  width: 240px;
+  margin-top: 15px;
+  font-size: 18.5px;
+  font-weight: 500;
+  text-align: center;
+  color: #7F5539;
+}
+
+.MainContentLatest > div > p {
+  height: 20px;
+  width: 240px;
+  margin-top: -10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.MainContentLatest > div > button {
+  height: 38px;
+  width: 160px;
+  color: white;
+  align-items: center;
+  margin: auto;
+  background-color: #7F5539;
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+}
+
+.MainAbout {
+  background-color: #EDE0D4;
+  display: flex;
+  flex-direction: column;
+}
+
+.MainAbout > img {
+  height: 80vh;
+  width: 80vw;
+  margin: auto;
+}
+
+.MainAboutText {
+  background-color: #B08968;
+  height: 560px;
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.MainAboutText > h2 {
+  height: 50px;
+  font-size: 34px;
+  font-weight: 700;
+}
+.MainAboutText > p {
+  font-weight: 400;
+  font-size: 24px;
+  display: block;
+  width: 80%;
+  margin: auto;
 }
