@@ -1,0 +1,183 @@
+.Product {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #FFF8F1;
+}
+.LeftBanner {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-top: 100px;
+  margin-left: 150px;
+}
+
+.FiltrProducts {
+  display: flex;
+  flex-direction: column;
+}
+
+.FiltrProducts > h2 {
+  border-bottom: 1px solid black;
+  margin-top: 50px;
+}
+
+/* TODO: use to style checkbox */
+/* .FiltrProducts > label > input {
+  width: 20px;
+  height: 20px;
+} */
+
+.FiltrProductsButton {
+  background-color: #7F5539;
+  border: none;
+  color: white;
+  height: 40px;
+  width: 250px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.LatestProducts {
+  display: flex;
+  flex-direction: column;
+}
+
+.LatestProducts > h2 {
+  margin-top: 50px;
+  border-bottom: 1px solid black;
+}
+
+.LatestProductsView {
+  display: flex;
+  flex-direction: row;
+}
+
+.LatestProductsView > img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.LatestProductsView > span {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 120px;
+  text-align: center;
+}
+
+.LatestProductsView > p {
+  font-size: 18px;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.BestsellerProducts > h2 {
+  margin-top: 50px;
+  border-bottom: 1px solid black;
+}
+
+.BestsellerProductsView {
+  display: flex;
+  flex-direction: row;
+}
+
+.BestsellerProductsView > img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.BestsellerProductsView > span {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 120px;
+  text-align: center;
+}
+.BestsellerProductsView > p {
+  font-size: 18px;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.MainBanner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 60px;
+  margin-right: 150px;
+}
+
+.Description {
+  font-size: 18px;
+}
+
+.ProductsSorting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#ViewSort > #ViewSortElements, #ViewSortProducts {
+  margin-bottom: 40px;
+  width: 100px;
+  display: block;
+}
+
+.MainBannerProductStructure {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0 184.2px;
+}
+
+.MainBannerProducts {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 300px;
+  
+}
+
+.MainBannerProducts > img {
+  width: 300px;
+  height: 300px;
+}
+.MainBannerProducts > span {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.MainBannerProducts > p {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+.MainBannerProducts > button {
+  width: 200px;
+  height: 40px;
+  background-color: #7F5539;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  margin: 20px auto;
+
+}
+
+.ProductsPage {
+
+}
