@@ -152,6 +152,7 @@
   background-color: #EDE0D4;
   display: flex;
   flex-direction: column;
+  padding-bottom: 100px;
 }
 
 .MainAbout > img {

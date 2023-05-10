@@ -89,7 +89,7 @@ export const HomePage = () => {
       <div className="MainAbout">
         <img src={About} alt="about" />
         <div className="MainAboutText">
-          <h2>Kim jesteśmy?</h2>
+          <h2>KIM JESTEŚMY?</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi. Diam nisl non in et mattis. Sit pulvinar cursus integer lectus sagittis bibendum. Rhoncus cras diam tellus convallis.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi. Diam nisl non in et mattis. Sit pulvinar cursus integer lectus sagittis bibendum. Rhoncus cras diam tellus convallis.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi.</p>

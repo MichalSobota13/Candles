@@ -27,7 +27,7 @@ export const Footer = () => {
           <input id="email" type="email" placeholder="Wpisz adres e-mail" />
           <button>Wyślij</button>
           <label>
-            <input type="checkbox" name="checkbox" id="" />
+            <input type="checkbox" name="checkbox" id="policy" />
             Akceptuję <strong>politykę prywatności.</strong></label>
           <p>Wyrażam zgodę na przetwarzanie danych Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
         </div>
