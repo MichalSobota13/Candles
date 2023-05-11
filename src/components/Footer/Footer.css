@@ -57,6 +57,7 @@
 .FooterNewsletter {
   width: 415px;
   height: auto;
+  margin-right: 100px;
 }
 
 #email {

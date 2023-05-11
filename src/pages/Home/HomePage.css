@@ -157,14 +157,14 @@
 
 .MainAbout > img {
   height: 80vh;
-  width: 80vw;
+  width: 70vw;
   margin: auto;
 }
 
 .MainAboutText {
   background-color: #B08968;
   height: 560px;
-  width: 80vw;
+  width: 70vw;
   margin: auto;
   text-align: center;
   color: white;
