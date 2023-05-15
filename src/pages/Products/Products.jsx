@@ -1,15 +1,15 @@
 import "./Products.css"
 import Product from "../../assets/Product.jpg"
 import { Link } from "react-router-dom"
-
+import productsList from "../../data/productsList"
 
 export const Products = () => {
   return (
     <div className="Products">
       <div className="LeftBanner">
         <div className="FiltrProducts">
-          <h3><Link to="/">Strona Główna</Link>
-          <Link to="/produkty">&gt;Produkty</Link></h3>
+          <h3><Link to="/">Strona Główna </Link>
+          <Link to="/produkty">&gt; Produkty</Link></h3>
 
           <h2>Filtr</h2>
           <label>
@@ -76,19 +76,19 @@ export const Products = () => {
         <div className="BestsellerProducts">
           <h2>BESTSELLERY</h2>
 
-          <div className="BestsellerProductsView">
-            <img src={Product} alt="Product" />
-            <span>Soy Candle
-            <p>89,00zł</p>
-            </span>
-          </div>
-
-          <div className="BestsellerProductsView">
-            <img src={Product} alt="Product" />
-            <span>Soy Candle
-            <p><del>99,00</del> 89,00zł</p>
-            </span>
-          </div>
+          {
+            productsList.filter(product => product.rating >= 4).map(product => (
+              <div className="BestsellerProductsView" key={`${product.id}-bestseller`}>
+                <img src={product.img} alt="Product" />
+                <span>{product.name}
+                <p>
+                  {product.discountPrice && <del>{product.mainPrice}</del>}
+                  {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł
+                </p>
+                </span>
+              </div>
+            ))
+          }
         </div>
       </div>
 
@@ -114,89 +114,19 @@ export const Products = () => {
           </div>
 
           <div className="MainBannerProductsStructure">
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
-
-            <div className="MainBannerProducts">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle</span>
-              <p>89,00zł</p>
-              <button>Dodaj do koszyka</button>
-            </div>
+            {
+              productsList.map((product) => (
+                <div className="MainBannerProducts" key={product.id}>
+                  <Link to={`/produkty/${product.id}`}>
+                    <img src={product.img} alt="Product" />
+                    <span>{product.name}</span>
+                  </Link>
+                  <p>{product.discountPrice && <del>{product.mainPrice}</del>}
+                  {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
+                  <button>Dodaj do koszyka</button>
+                </div>
+              ))
+            }
           </div>
 
           <div className="MainBannerPageButtons">

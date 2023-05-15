@@ -165,15 +165,21 @@
   flex-direction: column;
   height: 400px;
   width: 230px;
-  
 }
 
-.MainBannerProducts > img {
+.MainBannerProducts > a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+
+.MainBannerProducts > a > img {
   width: 230px;
   height: 230px;
 }
 
-.MainBannerProducts > span {
+.MainBannerProducts > a > span {
   font-size: 20px;
   font-weight: 600;
   text-align: center;

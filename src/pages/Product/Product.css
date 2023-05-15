@@ -1,0 +1,138 @@
+.Product {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  background-color: #FFF8F1;
+}
+
+.ProductView {
+  display: flex;
+  flex-direction: row;
+  width: 65vw;
+  margin: auto;
+}
+
+.ProductView > img {
+  display: flex;
+  height: 500px;
+  width: 500px;
+}
+
+.ProductViewDescription {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProductViewDescription > span {
+  font-size: 26px;
+  font-weight: 600;
+  margin-left: 50px;
+}
+
+.ProductViewDescription > span > p {
+  font-size: 20px;
+}
+
+.ProductQuantity {
+  display: flex;
+}
+
+.BtnQA {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+#PQuantity {
+  display: flex;
+  border: 1px solid black;
+  margin: 50px 20px 50px 50px;
+  justify-content: center;
+  height: auto;
+  width: 100px;
+  background-color: white;
+}
+
+#PQuantityWanted {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.BtnQty {
+  text-decoration: none;
+  color: black;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BtnQtyMinus {
+  float: left;
+  position: relative;
+  text-decoration: none;
+  font-size: 28px;
+  color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.BtnQtyMinus::after {
+  content: '\2212';
+  position: absolute;
+  top: 0;
+  right: 7.8px;
+  color: #000;
+  line-height: 35px;
+  font-weight: 300;
+}
+
+.BtnQtyPlus {
+  float: left;
+  position: relative;
+  text-decoration: none;
+  font-size: 28px;
+  color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.BtnQtyPlus::before {
+  content: '\002B';
+  position: absolute;
+  top: 0;
+  left: 7.3px;
+  color: #000;
+  line-height: 35px;
+  font-weight: 300;
+}
+
+.BtnAdd {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  width: 250px;
+  height: 34px;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+  color: white;
+  background-color: #7F5539;
+  border: none;
+  margin: 50px 20px ;
+}
+
+.ProductDescriptionBottom {
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 50px;
+}
