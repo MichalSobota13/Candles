@@ -35,7 +35,9 @@ export const Product = () => {
             <button className="BtnAdd">Dodaj do koszyka</button>
           </div>
           <div className="ProductDescriptionBottom">
-            {product.description}
+            <span>
+              {product.description}
+            </span> 
           </div>
         </div>
       </div>

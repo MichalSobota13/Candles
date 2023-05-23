@@ -1,7 +1,7 @@
 .Product {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   background-color: #FFF8F1;
 }
@@ -9,7 +9,7 @@
 .ProductView {
   display: flex;
   flex-direction: row;
-  width: 65vw;
+  width: 75vw;
   margin: auto;
 }
 
@@ -132,7 +132,137 @@
 }
 
 .ProductDescriptionBottom {
+  display: flex;
+  flex-direction: row;
   font-size: 18px;
   font-weight: 300;
   margin-left: 50px;
+}
+
+@media screen and (max-width: 1440px) {
+  .ProductView {
+    width: 90vw;
+  }
+
+  .ProductView > img {
+    height: 30em;
+    width: 30em;
+  }
+
+  #PQuantity {
+    margin: 0px 0px 100px 50px;
+  }
+
+  .BtnAdd {
+    width: 200px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 20px;
+  }
+
+  .ProductDescriptionBottom {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 50px;
+    margin-top: -60px;
+    margin-right: 3%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ProductView {
+    width: 95vw;
+  }
+
+  .ProductView > img {
+    height: 25em;
+    width: 25em;
+  }
+
+  .ProductViewDescription > span {
+    font-size: 2em;
+    font-weight: 600;
+    margin-left: 20px;
+  }
+  
+  .ProductViewDescription > span > p {
+    font-size: 20px;
+  }
+
+  #PQuantity {
+    margin: 0px 0px 100px 20px;
+  }
+
+  .BtnAdd {
+    width: 200px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 20px;
+  }
+
+  .ProductDescriptionBottom {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-top: -60px;
+    margin-right: 3%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ProductView {
+    width: 95vw;
+  }
+
+  .ProductView > img {
+    display: flex;
+    height: 20em;
+    width: 20em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ProductView {
+    height: 100vh;
+    width: 98vw;
+    flex-direction: column;
+  }
+
+  .ProductView > img {
+    height: 20em;
+    width: 20em;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  #PQuantity {
+    margin: 0px 0px 100px 20px;
+  }
+
+  .BtnAdd {
+    width: 150px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 0 20px;
+  }
+
+  .ProductViewDescription {
+    height: 100vh;
+  }
+
+  .ProductViewDescription > span {
+    font-size: 2em;
+    font-weight: 600;
+    margin-left: 20px;
+    text-align: left;
+  }
+  
+  .ProductViewDescription > span > p {
+    font-size: 20px;
+  }
+
+  .ProductDescriptionBottom {
+    height: auto;
+    margin: -90px 0px 0px 5px;
+  }
 }

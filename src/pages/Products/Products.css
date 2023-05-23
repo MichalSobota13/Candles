@@ -9,9 +9,9 @@
 .LeftBanner {
   display: flex;
   flex-direction: column;
-  width: 900px;
+  width: 800px;
   margin-top: 150px;
-  margin-left: 300px;
+  margin-left: 150px;
 }
 
 .FiltrProducts {
@@ -131,8 +131,8 @@
   display: flex;
   flex-direction: column;
   margin-top: 150px;
-  margin-left: 60px;
-  margin-right: 300px;
+  margin-left: 40px;
+  margin-right: 150px;
 }
 
 .Description {
@@ -157,7 +157,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0 28px;
+  gap: 0 1%;
+  justify-content: space-around;
+
 }
 
 .MainBannerProducts {
@@ -226,4 +228,111 @@
 
 .ProductsPage:first-child {
   background-color: black;
+}
+
+@media screen and (max-width: 1440px){
+  .LeftBanner {
+    margin-top: 10%;
+    margin-left: 5%;
+  }
+
+  .MainBanner {
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 5%;
+  }
+
+  .Description {
+    font-size: 1rem;
+  }
+
+  .MainBannerProductsStructure {
+    gap: 0 1%;
+    justify-content: space-around;
+
+  }
+}
+@media screen and (max-width: 1024px){
+  .LeftBanner {
+    width: 230px;
+    margin-top: 10%;
+    margin-left: 2%;
+  }
+
+  .FiltrProductsButton {
+    height: 38px;
+    width: 200px;
+  }
+
+  .MainBanner {
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .Description {
+    font-size: 1rem;
+  }
+
+  .MainBannerProductsStructure {
+    gap: 0 1%;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 768px){
+  .LeftBanner {
+    width: 180px;
+    margin-top: 10%;
+    margin-left: 2%;
+  }
+
+  .LatestProducts,
+  .BestsellerProducts {
+    display: none;
+  }
+
+  .FiltrProductsButton {
+    background-color: #7F5539;
+    border: none;
+    color: white;
+    height: 35px;
+    width: 170px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .MainBanner {
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .Description {
+    font-size: 0.9rem;
+  }
+
+  .MainBannerProductsStructure {
+    gap: 0 1%;
+  }
+}
+@media screen and (max-width: 700px){
+  .LeftBanner {
+    display: none;
+  }
+
+  .MainBanner {
+    margin-top: 20%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .Description {
+    font-size: 1rem;
+  }
+
+  .MainBannerProductsStructure {
+    justify-content: space-around;
+    gap: 0 5%;
+  }
 }
