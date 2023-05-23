@@ -76,6 +76,34 @@
   margin: 5px;
 }
 
+.Menu {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .Header{
+    height: 80px;
+  }
+
+  .Navbar{
+    width: 100%;
+    margin: 0;
+  }
+
+  .Navigation{
+    width: 50vw;
+  }
+  
+  .Logo > img {
+    top: -18px;
+    left: -15px;
+  }
+
+  .NavIcons{
+    margin-right: 10px;
+  }  
+}
+
 @media screen and (max-width: 1024px) {
   .Header{
     height: 80px;
@@ -85,11 +113,19 @@
     width: 100%;
     margin: 0;
   }
+
+  .Navigation{
+    width: 60vw;
+  }
   
   .Logo > img {
     top: -18px;
     left: -15px;
   }
+
+  .NavIcons{
+    margin-right: 10px;
+  }   
 }
   
 @media screen and (max-width: 768px) {
@@ -111,25 +147,28 @@
   }
 
   .NavIcons{
-    margin-right: 0;
+    margin-right: 10px;
   }  
 }
 
 @media screen and (max-width: 425px) {
   .Header{
-    height: 70px;
+    height: 80px;
+    width: 100%;
   }
 
   .Navbar{
     margin: 0;
-    display: flex;
-    flex-direction: row;
     position: relative;
     justify-content: center;
   }
 
   .Logo {
     margin: 0;
+  }
+
+  .Logo > img {
+    top: -18px;
   }
 
   .Navigation {
@@ -150,7 +189,10 @@
   .Menu {
     position: absolute;
     width: 100%;
-    min-height: 100px;
+    min-height: 300px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2;
     background-color: white;
     z-index: 10;
     bottom: 10;
@@ -164,5 +206,12 @@
     text-decoration: none;
     color: black;
     background-color: white;
+  }
+
+  .Menu a:hover {
+    background-color: #EDE0D4;
+    border-radius: 9px;
+    width: 90%;
+    text-align: center;
   }
 }

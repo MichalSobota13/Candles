@@ -1,12 +1,14 @@
 import "./Footer.css"
 import { Link } from "react-router-dom"
+import Logo from "../../assets/logo-api-white.svg"
+
 
 export const Footer = () => {
   return (
     <div className="Footer">
       <div className="FooterNavigation">
         <div className="FooterLogo">
-          {/* <img src="" alt="logo" /> */}
+          <img src={Logo} alt="logo" />
         </div>
         <div className="FooterContact">
           <h2>KONTAKT</h2>

@@ -6,7 +6,7 @@ import Logo from "../../assets/logo-api-black.svg"
 import { useState } from "react"
 
 export const Header = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   return (
     <div className="Header">
       <div className="Navbar">
@@ -15,10 +15,10 @@ export const Header = () => {
         </div>
         <div className="Navigation">
           <div className="NavLinks">
-            <Link to="/">Strona Główna</Link>
-            <Link to="/produkty">Produkty</Link>
-            <Link to="/o-nas">O nas</Link>
-            <Link to="/kontakt">Kontakt</Link>
+            <Link to="/">STRONA GŁÓWNA</Link>
+            <Link to="/produkty">PRODUKTY</Link>
+            <Link to="/o-nas">O NAS</Link>
+            <Link to="/kontakt">KONTAKT</Link>
           </div>
           <div className="NavIcons">
             <FontAwesomeIcon icon={faBasketShopping} />
@@ -31,10 +31,10 @@ export const Header = () => {
       </div>
       {
         open && <div className="Menu">
-            <Link to="/">Strona Główna</Link>
-            <Link to="/produkty">Produkty</Link>
-            <Link to="/o-nas">O nas</Link>
-            <Link to="/kontakt">Kontakt</Link>
+            <Link to="/">STRONA GŁÓWNA</Link>
+            <Link to="/produkty">PRODUKTY</Link>
+            <Link to="/o-nas">O NAS</Link>
+            <Link to="/kontakt">KONTAKT</Link>
           </div>
       }
     </div>
