@@ -32,7 +32,7 @@
   
 .Navigation{
   height: 100%;
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -91,7 +91,7 @@
   }
 
   .Navigation{
-    width: 50vw;
+    width: 60vw;
   }
   
   .Logo > img {
@@ -115,7 +115,7 @@
   }
 
   .Navigation{
-    width: 60vw;
+    width: 70vw;
   }
   
   .Logo > img {
@@ -151,7 +151,7 @@
   }  
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 700px) {
   .Header{
     height: 80px;
     width: 100%;

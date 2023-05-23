@@ -7,7 +7,7 @@
 
 .Banner {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,12 +20,12 @@
 }
 
 .BannerContent {
-  width: 45%;
+  width: 50%;
   font-size: 24px;
   font-weight: 300;
   font-style: normal;
   position: absolute;
-  left: 10%;
+  left: 9%;
 }
 
 .BannerContent > h1 {
@@ -86,21 +86,21 @@
   position:relative;
   flex-direction: column;
   width: 100vw;
-  min-height: 140vh;
+  min-height: 120vh;
 }
 
 .MainContent > h2 {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .MainContentLatest {
   flex-direction: row;
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  width: 80%;
   align-items: flex-start;
   margin: auto;
 }
@@ -156,14 +156,14 @@
 }
 
 .MainAbout > img {
-  height: 80vh;
-  width: 70vw;
+  height: 100%;
+  width: 70%;
   margin: auto;
 }
 
 .MainAboutText {
   background-color: #B08968;
-  height: 560px;
+  height: 60vh;
   width: 70vw;
   margin: auto;
   text-align: center;
@@ -183,4 +183,348 @@
   display: block;
   width: 80%;
   margin: auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .BannerContent {
+    height: 45%;
+    width: 50%;
+    font-size: 1rem;
+    left: 5%;
+  }
+
+  .BannerContent > h1 {
+    font-size: 4rem;
+  }
+
+  .ButtonHome {
+    width: 300px;
+    height: 48px;
+    margin-top: 30px;
+  }
+  
+  .NextBanner {
+    width: 200px;
+  }
+
+  .NextBanner > div {
+    width: 22px;
+    height: 22px;
+    margin-top: 40px;
+  }
+
+  .MainContent {
+    min-height: 117vh;
+  }
+  
+  .MainContentLatest {
+    width: 97%;
+  }
+
+  .MainAbout > img {
+    width: 80vw;
+  }
+  
+  .MainAboutText {
+    height: 70vh;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .BannerContent {
+    height: 29%;
+    width: 55%;
+    font-size: 0.8rem;
+    left: 3%;
+  }
+
+  .BannerContent > h1 {
+    font-size: 3.1rem;
+  }
+
+  .ButtonHome {
+    width: 220px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .NextBanner {
+    width: 140px;
+  }
+  
+  .NextBanner > div {
+    margin-top: 30px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .MainContent {
+    min-height: 88vh;
+  }
+
+  .MainContent > h2 {
+    margin-top: 100px;
+  }
+  
+  .MainContentLatest {
+    width: 97%;
+  }
+  
+  .MainContentLatest > div {
+    height: 200px;
+    width: 160px;
+  }
+  
+  .MainContentLatest > div > img {
+    height: 160px;
+    width: 160px;
+  }
+  
+  .MainContentLatest > div > span {
+    width: 160px;
+    margin-top: 7px;
+  }
+  
+  .MainContentLatest > div > p {
+    height: 20px;
+    width: 160px;
+    margin-top: 0;
+  }
+  
+  .MainContentLatest > div > button {
+    height: 38px;
+    width: 130px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .MainAbout {
+    padding-bottom: 60px;
+  }
+
+  .MainAbout > img {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+  }
+
+  .MainAboutText {
+    height: 70vh;
+    width: 90vw;
+  }
+
+  .MainAboutText > p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .BannerContent {
+    height: 25%;
+    width: 55%;
+    font-size: 0.7rem;
+    left: 4%;
+  }
+
+  .BannerContent > h1 {
+    font-size: 2.8rem;
+  }
+
+  .ButtonHome {
+    width: 180px;
+    height: 30px;
+    margin-top: 15px;
+    font-size: 11px;
+  }
+  
+  .NextBanner {
+    width: 120px;
+  }
+
+  .NextBanner > div {
+    margin-top: 20px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .MainContent {
+    min-height: 80vh;
+  }
+
+  .MainContent > h2 {
+    margin-top: 100px;
+  }
+
+  .MainContent > h2:first-child{
+    margin-top: 50px;
+  }
+
+  .MainContentLatest {
+    width: 97%;
+  }
+  
+  .MainContentLatest > div {
+    height: 200px;
+    width: 160px;
+  }
+  
+  .MainContentLatest > div > img {
+    height: 160px;
+    width: 160px;
+  }
+  
+  .MainContentLatest > div > span {
+    width: 160px;
+    margin-top: 7px;
+  }
+  
+  .MainContentLatest > div > p {
+    height: 20px;
+    width: 160px;
+    margin-top: 0;
+  }
+  
+  .MainContentLatest > div > button {
+    height: 38px;
+    width: 130px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .MainAbout {
+    padding-bottom: 50px;
+  }
+  
+  .MainAbout > img {
+    width: 90%;
+  }
+  
+  .MainAboutText {
+    height: 60vh;
+    width: 90vw;
+  }
+  .MainAboutText > h2 {
+    height: 20px;
+    font-size: 1.6rem;
+  }
+  .MainAboutText > p {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .Banner {
+    width: 100vw;
+    height: 70vh;
+    background-color: #7F5539;
+    color: white;
+  }
+  
+  .Banner > img {
+    display: none;
+  }
+  
+  .BannerContent {
+    width: 90%;
+    margin: auto;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .BannerContent > h1 {
+    font-size: 3.4rem;
+  }
+
+  .BannerContent > span {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  .BannerContent > p {
+    display: block;
+    width: 90%;
+    margin: auto;  
+  }
+
+  .ButtonHome {
+    display: none;
+  }
+  
+  .NextBanner {
+    display: none;
+  }
+
+  .MainContent {
+    min-height: 90vh;
+  }
+
+  .MainContent > h2 {
+    font-size: 2rem;
+    margin-top: 80px;
+  }
+
+  .MainContent > h2:first-child{
+    margin-top: 60px;
+  }
+
+  .MainContentLatest {
+    width: 97%;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .MainContentLatest > div {
+    height: 500px;
+    width: 300px;
+  }
+  
+  .MainContentLatest > div > img {
+    height: 300px;
+    width: 300px;
+  }
+  
+  .MainContentLatest > div > span {
+    width: 300px;
+    font-size: 1.7rem;
+    margin-top: 7px;
+  }
+  
+  .MainContentLatest > div > p {
+    width: 300px;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .MainContentLatest > div > button {
+    height: 40px;
+    width: 220px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .MainAbout {
+    padding-bottom: 50px;
+  }
+  
+  .MainAbout > img {
+    display: none;
+    }
+  
+  .MainAboutText {
+    height: 80vh;
+    width: 90vw;
+  }
+  .MainAboutText > h2 {
+    height: 20px;
+    font-size: 1.6rem;
+  }
+  .MainAboutText > p {
+    font-size: 1.2rem;
+    width: 95%;
+  }
 }
