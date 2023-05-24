@@ -1,7 +1,8 @@
 import "./HomePage.css"
 import Main from "../../assets/Main.jpg"
-import Product from "../../assets/Product.jpg"
 import About from "../../assets/About.jpg"
+import { Link } from "react-router-dom"
+import productsList from "../../data/productsList"
 
 export const HomePage = () => {
   return (
@@ -30,62 +31,45 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
+
       <div className="MainContent">
         <h2>NAJNOWSZE</h2>
+
         <div className="MainContentLatest">
-          <div>
-            <img src={Product} alt="Product" />
-            <span>Soy Candle</span>
-            <p>89,00zł</p>
-            <button>Dodaj do koszyka</button>
-          </div>
-          <div>
-            <img src={Product} alt="Product" />
-            <span>Soy Candle</span>
-            <p>89,00zł</p>
-            <button>Dodaj do koszyka</button>
-          </div>
-          <div>
-            <img src={Product} alt="Product" />
-            <span>Soy Candle</span>
-            <p>89,00zł</p>
-            <button>Dodaj do koszyka</button>
-          </div>
-          <div>
-            <img src={Product} alt="Product" />
-            <span>Soy Candle</span>
-            <p>89,00zł</p>
-            <button>Dodaj do koszyka</button>
-          </div>
+        {
+          productsList.slice(0, 4).map((product) => (
+            <div key={product.id}>
+              <Link to={`/produkty/${product.id}`}>
+                <img src={product.img} alt="Product" />
+                <span>{product.name}</span>
+              </Link>
+              <p>{product.discountPrice && <del>{product.mainPrice}</del>}
+              {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
+              <button>Dodaj do koszyka</button>
+            </div>
+          ))
+        }
         </div>
+
         <h2>BESTSELLERY</h2>
         <div className="MainContentLatest">
-          <div>
-            <img src={Product} alt="Product" />
-            <span>Soy Candle</span>
-            <p>89,00zł</p>
-            <button>Dodaj do koszyka</button>
-          </div>
-          <div>
-            <img src={Product} alt="Product" />
-            <span>Soy Candle</span>
-            <p>89,00zł</p>
-            <button>Dodaj do koszyka</button>
-          </div>
-          <div>
-            <img src={Product} alt="Product" />
-            <span>Soy Candle</span>
-            <p>89,00zł</p>
-            <button>Dodaj do koszyka</button>
-          </div>
-          <div>
-            <img src={Product} alt="Product" />
-            <span>Soy Candle</span>
-            <p>89,00zł</p>
-            <button>Dodaj do koszyka</button>
-          </div>
-        </div>
+
+        {
+          productsList.slice(0, 4).map((product) => (
+            <div key={product.id}>
+              <Link to={`/produkty/${product.id}`}>
+                <img src={product.img} alt="Product" />
+                <span>{product.name}</span>
+              </Link>
+              <p>{product.discountPrice && <del>{product.mainPrice}</del>}
+              {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
+              <button>Dodaj do koszyka</button>
+            </div>
+          ))
+        }
       </div>
+    </div>
+
       <div className="MainAbout">
         <img src={About} alt="about" />
         <div className="MainAboutText">
