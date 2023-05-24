@@ -70,7 +70,7 @@ export const HomePage = () => {
       </div>
     </div>
 
-      <div className="MainAbout">
+      <div className="MainAbout" id="about">
         <img src={About} alt="about" />
         <div className="MainAboutText">
           <h2>KIM JESTEŚMY?</h2>

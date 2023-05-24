@@ -17,11 +17,11 @@ export const Header = () => {
           <div className="NavLinks">
             <Link to="/">STRONA GŁÓWNA</Link>
             <Link to="/produkty">PRODUKTY</Link>
-            <Link to="/o-nas">O NAS</Link>
-            <Link to="/kontakt">KONTAKT</Link>
+            <a href="#about">O NAS</a>
+            <a href="#footer">KONTAKT</a>
           </div>
           <div className="NavIcons">
-            <FontAwesomeIcon icon={faBasketShopping} />
+            <a href="/basket"><FontAwesomeIcon icon={faBasketShopping} /></a>
             <FontAwesomeIcon icon={faUser} />
           </div>
           <div className="Burger" onClick={() => setOpen(!open)}>
@@ -33,8 +33,8 @@ export const Header = () => {
         open && <div className="Menu">
             <Link to="/">STRONA GŁÓWNA</Link>
             <Link to="/produkty">PRODUKTY</Link>
-            <Link to="/o-nas">O NAS</Link>
-            <Link to="/kontakt">KONTAKT</Link>
+            <a href="#about">O NAS</a>
+            <a href="#footer">KONTAKT</a>
           </div>
       }
     </div>

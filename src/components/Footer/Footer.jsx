@@ -5,7 +5,7 @@ import Logo from "../../assets/logo-api-white.svg"
 
 export const Footer = () => {
   return (
-    <div className="Footer">
+    <div className="Footer" id="footer">
       <div className="FooterNavigation">
         <div className="FooterLogo">
           <img src={Logo} alt="logo" />
