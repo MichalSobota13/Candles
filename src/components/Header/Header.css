@@ -62,7 +62,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}  
+}
+
+.NavIcons > a {
+  text-decoration: none;
+  color: black;
+}
+
+.NavIcons > a > span {
+  font-size: smaller;
+}
 
 .Burger{
   display: none;

@@ -4,9 +4,13 @@ import { faBasketShopping, faUser, faListUl } from '@fortawesome/free-solid-svg-
 import { Link } from "react-router-dom"
 import Logo from "../../assets/logo-api-black.svg"
 import { useState } from "react"
+import { CartContext } from "../../pages/Basket/CartContext"
+import { useContext } from "react"
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
+  const {productCount} = useContext(CartContext);
+
   return (
     <div className="Header">
       <div className="Navbar">
@@ -21,8 +25,11 @@ export const Header = () => {
             <a href="#footer">KONTAKT</a>
           </div>
           <div className="NavIcons">
-            <a href="/basket"><FontAwesomeIcon icon={faBasketShopping} /></a>
-            <FontAwesomeIcon icon={faUser} />
+            <a href="/basket">
+              <FontAwesomeIcon icon={faBasketShopping} />
+                <span><sup>{productCount}</sup></span>
+              </a>
+              <FontAwesomeIcon icon={faUser} />
           </div>
           <div className="Burger" onClick={() => setOpen(!open)}>
             <FontAwesomeIcon icon={faListUl} />

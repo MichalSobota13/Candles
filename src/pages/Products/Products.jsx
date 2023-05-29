@@ -2,8 +2,13 @@ import "./Products.css"
 import Product from "../../assets/Product.jpg"
 import { Link } from "react-router-dom"
 import productsList from "../../data/productsList"
+import { useContext } from "react"
+import { CartContext } from "../Basket/CartContext"
+
 
 export const Products = () => {
+  const {addToCart} = useContext(CartContext);
+
   return (
     <div className="Products">
       <div className="LeftBanner">
@@ -123,7 +128,7 @@ export const Products = () => {
                   </Link>
                   <p>{product.discountPrice && <del>{product.mainPrice}</del>}
                   {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
-                  <button>Dodaj do koszyka</button>
+                  <button onClick={() => addToCart(product, 1)}>Dodaj do koszyka</button>
                 </div>
               ))
             }

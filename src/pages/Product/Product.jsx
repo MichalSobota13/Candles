@@ -1,5 +1,7 @@
 import "./Product.css"
 import { useProductProps } from "./Product.hooks";
+import { CartContext } from "../../pages/Basket/CartContext"
+import { useContext } from "react"
 
 export const Product = () => {
   const {
@@ -9,6 +11,8 @@ export const Product = () => {
     onChange,
     productCount
   } = useProductProps()
+
+  const {addToCart} = useContext(CartContext);
 
   return (
     <div className="Product">
@@ -32,7 +36,7 @@ export const Product = () => {
                 <span className="BtnQtyPlus" />
               </div>
             </div>
-            <button className="BtnAdd">Dodaj do koszyka</button>
+            <button onClick={() => addToCart(product, productCount)} className="BtnAdd">Dodaj do koszyka</button>
           </div>
           <div className="ProductDescriptionBottom">
             <span>

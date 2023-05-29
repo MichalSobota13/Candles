@@ -3,8 +3,11 @@ import Main from "../../assets/Main.jpg"
 import About from "../../assets/About.jpg"
 import { Link } from "react-router-dom"
 import productsList from "../../data/productsList"
+import { CartContext } from "../../pages/Basket/CartContext"
+import { useContext } from "react"
 
 export const HomePage = () => {
+  const {addToCart} = useContext(CartContext);
   return (
     <div className="HomeContainer">
       <div className="Banner">
@@ -45,7 +48,7 @@ export const HomePage = () => {
               </Link>
               <p>{product.discountPrice && <del>{product.mainPrice}</del>}
               {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
-              <button>Dodaj do koszyka</button>
+              <button onClick={() => addToCart(product, 1)}>Dodaj do koszyka</button>
             </div>
           ))
         }
@@ -63,7 +66,7 @@ export const HomePage = () => {
               </Link>
               <p>{product.discountPrice && <del>{product.mainPrice}</del>}
               {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
-              <button>Dodaj do koszyka</button>
+              <button onClick={() => addToCart(product, 1)}>Dodaj do koszyka</button>
             </div>
           ))
         }

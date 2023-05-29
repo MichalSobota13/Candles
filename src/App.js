@@ -1,18 +1,20 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { HomePage, Layout, Products, Product } from './pages';
+import { HomePage, Layout, Products, Product, CartProvider } from './pages';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path='produkty' element={<Products />} />
-        <Route path='produkty/:id' element={<Product />} />
-        <Route path='o-nas' element={<HomePage />} />
-        <Route path='kontakt' element={<HomePage />} />
-      </Route>
-    </Routes>
+    <CartProvider>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path='produkty' element={<Products />} />
+          <Route path='produkty/:id' element={<Product />} />
+          <Route path='o-nas' element={<HomePage />} />
+          <Route path='kontakt' element={<HomePage />} />
+        </Route>
+      </Routes>
+    </CartProvider>
   );
 }
 
