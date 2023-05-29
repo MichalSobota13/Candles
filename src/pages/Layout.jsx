@@ -7,7 +7,6 @@ export const Layout = () => {
     <div className="App">
       <Header />
       <Outlet />
-      <Footer />
     </div>
   );
 }

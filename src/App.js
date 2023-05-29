@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import { HomePage, Layout, Products, Product, CartProvider } from './pages';
+import { HomePage, Layout, Products, Product, CartProvider, Basket } from './pages';
+import { Footer } from './components';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
           <Route path='produkty' element={<Products />} />
           <Route path='produkty/:id' element={<Product />} />
           <Route path='o-nas' element={<HomePage />} />
-          <Route path='kontakt' element={<HomePage />} />
+          <Route path='kontakt' element={<Footer />} />
+          <Route path='koszyk' element={<Basket />} />
         </Route>
       </Routes>
     </CartProvider>

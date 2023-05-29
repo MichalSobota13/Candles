@@ -21,14 +21,14 @@ export const Header = () => {
           <div className="NavLinks">
             <Link to="/">STRONA GŁÓWNA</Link>
             <Link to="/produkty">PRODUKTY</Link>
-            <a href="#about">O NAS</a>
+            <a href="/#about">O NAS</a>
             <a href="#footer">KONTAKT</a>
           </div>
           <div className="NavIcons">
-            <a href="/basket">
+            <Link to="/koszyk">
               <FontAwesomeIcon icon={faBasketShopping} />
                 <span><sup>{productCount}</sup></span>
-              </a>
+            </Link>
               <FontAwesomeIcon icon={faUser} />
           </div>
           <div className="Burger" onClick={() => setOpen(!open)}>

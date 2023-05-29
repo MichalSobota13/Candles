@@ -4,84 +4,88 @@ import About from "../../assets/About.jpg"
 import { Link } from "react-router-dom"
 import productsList from "../../data/productsList"
 import { CartContext } from "../../pages/Basket/CartContext"
+import { Footer } from "../../components"
 import { useContext } from "react"
 
 export const HomePage = () => {
   const {addToCart} = useContext(CartContext);
   return (
-    <div className="HomeContainer">
-      <div className="Banner">
-        <img src={Main} alt="alal" />
-        <div className="BannerContent">
-          <h1>API CANDLES</h1>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <>
+      <div className="HomeContainer">
+        <div className="Banner">
+          <img src={Main} alt="alal" />
+          <div className="BannerContent">
+            <h1>API CANDLES</h1>
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <p>
+                Diam dictum nulla nullam amet morbi eros id fringilla. 
+              </p>
+            </span>
             <p>
-              Diam dictum nulla nullam amet morbi eros id fringilla. 
+              Sed quis morbi dictum aliquam tristique quis euismod id.
             </p>
-          </span>
-          <p>
-            Sed quis morbi dictum aliquam tristique quis euismod id.
-          </p>
-          <button className="ButtonHome">DOWIEDZ SIĘ WIĘCEJ</button>
-          <div className="NextBanner">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <button className="ButtonHome">DOWIEDZ SIĘ WIĘCEJ</button>
+            <div className="NextBanner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="MainContent">
+          <h2>NAJNOWSZE</h2>
+
+          <div className="MainContentLatest">
+          {
+            productsList.slice(0, 4).map((product) => (
+              <div key={product.id}>
+                <Link to={`/produkty/${product.id}`}>
+                  <img src={product.img} alt="Product" />
+                  <span>{product.name}</span>
+                </Link>
+                <p>{product.discountPrice && <del>{product.mainPrice}</del>}
+                {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
+                <button onClick={() => addToCart(product, 1)}>Dodaj do koszyka</button>
+              </div>
+            ))
+          }
+          </div>
+
+          <h2>BESTSELLERY</h2>
+          <div className="MainContentLatest">
+
+          {
+            productsList.slice(0, 4).map((product) => (
+              <div key={product.id}>
+                <Link to={`/produkty/${product.id}`}>
+                  <img src={product.img} alt="Product" />
+                  <span>{product.name}</span>
+                </Link>
+                <p>{product.discountPrice && <del>{product.mainPrice}</del>}
+                {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
+                <button onClick={() => addToCart(product, 1)}>Dodaj do koszyka</button>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+        <div className="MainAbout" id="about">
+          <img src={About} alt="about" />
+          <div className="MainAboutText">
+            <h2>KIM JESTEŚMY?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi. Diam nisl non in et mattis. Sit pulvinar cursus integer lectus sagittis bibendum. Rhoncus cras diam tellus convallis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi. Diam nisl non in et mattis. Sit pulvinar cursus integer lectus sagittis bibendum. Rhoncus cras diam tellus convallis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi.</p>
           </div>
         </div>
       </div>
-
-      <div className="MainContent">
-        <h2>NAJNOWSZE</h2>
-
-        <div className="MainContentLatest">
-        {
-          productsList.slice(0, 4).map((product) => (
-            <div key={product.id}>
-              <Link to={`/produkty/${product.id}`}>
-                <img src={product.img} alt="Product" />
-                <span>{product.name}</span>
-              </Link>
-              <p>{product.discountPrice && <del>{product.mainPrice}</del>}
-              {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
-              <button onClick={() => addToCart(product, 1)}>Dodaj do koszyka</button>
-            </div>
-          ))
-        }
-        </div>
-
-        <h2>BESTSELLERY</h2>
-        <div className="MainContentLatest">
-
-        {
-          productsList.slice(0, 4).map((product) => (
-            <div key={product.id}>
-              <Link to={`/produkty/${product.id}`}>
-                <img src={product.img} alt="Product" />
-                <span>{product.name}</span>
-              </Link>
-              <p>{product.discountPrice && <del>{product.mainPrice}</del>}
-              {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł</p>
-              <button onClick={() => addToCart(product, 1)}>Dodaj do koszyka</button>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-
-      <div className="MainAbout" id="about">
-        <img src={About} alt="about" />
-        <div className="MainAboutText">
-          <h2>KIM JESTEŚMY?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi. Diam nisl non in et mattis. Sit pulvinar cursus integer lectus sagittis bibendum. Rhoncus cras diam tellus convallis.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi. Diam nisl non in et mattis. Sit pulvinar cursus integer lectus sagittis bibendum. Rhoncus cras diam tellus convallis.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo urna turpis semper sed a vulputate mi.</p>
-        </div>
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 }

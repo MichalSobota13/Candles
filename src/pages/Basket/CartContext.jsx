@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
@@ -18,13 +18,22 @@ export function CartProvider({children}) {
     setProductCount(productCount + qty)
   };
 
-  useEffect(() => {
-    console.log(items)
-  }, [items])
-
+  const decrease = (id) => {
+    let index = items.findIndex(item => item.id === id)
+    if (items[index].qty > 1) {
+      let parsedItems = items
+      parsedItems[index] = { ...items[index], qty: items[index].qty - 1}
+      setItems(parsedItems)
+    }
+  }
   return (
-    <CartContext.Provider value={{items, productCount, addToCart}}>
+    <CartContext.Provider value={{
+      items,
+      productCount,
+      addToCart,
+      decrease
+    }}>
       {children}
-      </CartContext.Provider>
+    </CartContext.Provider>
   );
 }
