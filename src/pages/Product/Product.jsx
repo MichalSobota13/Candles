@@ -1,8 +1,7 @@
 import "./Product.css"
 import { useProductProps } from "./Product.hooks";
-import { CartContext } from "../../pages/Basket/CartContext"
+import { useCartContext } from "../../pages"
 import { Footer } from "../../components"
-import { useContext } from "react"
 
 export const Product = () => {
   const {
@@ -13,7 +12,7 @@ export const Product = () => {
     productCount
   } = useProductProps()
 
-  const {addToCart} = useContext(CartContext);
+  const { addToCart } = useCartContext()
 
   return (
     <>

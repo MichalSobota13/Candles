@@ -97,6 +97,10 @@ label {
   margin-top: 20px;
 }
 
+#privatPolicy {
+  color: white;
+}
+
 .FooterNewsletter > p {
   width: 398px;
   height: 136px;

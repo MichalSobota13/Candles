@@ -1,0 +1,36 @@
+.AboutUsPage {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 70vh;
+  padding-top: 10%;
+  background-color: #EDE0D4;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.AboutUsContainer > img {
+  margin: 10%;
+  width: 80vw;
+}
+
+.AboutUsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 70vw;
+  margin: 0 auto 10% auto;
+}
+
+.AboutUsText > h2 {
+  font-size: 2rem;
+}
+
+.AboutUsText > p {
+  font-size: 1.2rem;
+}

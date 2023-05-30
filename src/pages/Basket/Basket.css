@@ -1,8 +1,8 @@
 .Basket {
   display: block;
-  background-color: #FFF8F1;
+  background-color: #EDE0D4;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 60vh;
   padding: 150px 10vw;
 }
 

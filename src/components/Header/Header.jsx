@@ -4,12 +4,11 @@ import { faBasketShopping, faUser, faListUl } from '@fortawesome/free-solid-svg-
 import { Link } from "react-router-dom"
 import Logo from "../../assets/logo-api-black.svg"
 import { useState } from "react"
-import { CartContext } from "../../pages/Basket/CartContext"
-import { useContext } from "react"
+import { useCartContext } from "../../pages"
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
-  const {productCount} = useContext(CartContext);
+  const {productCount} = useCartContext();
 
   return (
     <div className="Header">
@@ -21,7 +20,7 @@ export const Header = () => {
           <div className="NavLinks">
             <Link to="/">STRONA GŁÓWNA</Link>
             <Link to="/produkty">PRODUKTY</Link>
-            <a href="/#about">O NAS</a>
+            <Link to="/o-nas">O NAS</Link>
             <a href="#footer">KONTAKT</a>
           </div>
           <div className="NavIcons">
@@ -29,7 +28,9 @@ export const Header = () => {
               <FontAwesomeIcon icon={faBasketShopping} />
                 <span><sup>{productCount}</sup></span>
             </Link>
+            <Link to="/login">
               <FontAwesomeIcon icon={faUser} />
+            </Link>
           </div>
           <div className="Burger" onClick={() => setOpen(!open)}>
             <FontAwesomeIcon icon={faListUl} />
@@ -40,7 +41,7 @@ export const Header = () => {
         open && <div className="Menu">
             <Link to="/">STRONA GŁÓWNA</Link>
             <Link to="/produkty">PRODUKTY</Link>
-            <a href="#about">O NAS</a>
+            <Link to="/o-nas">O NAS</Link>
             <a href="#footer">KONTAKT</a>
           </div>
       }

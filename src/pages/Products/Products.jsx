@@ -2,13 +2,11 @@ import "./Products.css"
 import Product from "../../assets/Product.jpg"
 import { Link } from "react-router-dom"
 import productsList from "../../data/productsList"
-import { useContext } from "react"
-import { CartContext } from "../Basket/CartContext"
+import { useCartContext } from ".."
 import { Footer } from "../../components"
 
-
 export const Products = () => {
-  const {addToCart} = useContext(CartContext);
+  const {addToCart} = useCartContext()
 
   return (
     <>

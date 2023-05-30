@@ -1,0 +1,95 @@
+.LoginPage {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 80vh;
+  padding-top: 10%;
+  background-color: #EDE0D4;
+}
+
+.LoginTemplate {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 50vh;
+  margin: 5%;
+  border: 1px solid #ABABAB;
+}
+
+.LoginTemplate > h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#email {
+  display: flex;
+  width: 80%;
+  height: 2.5rem;
+  margin: auto;
+  justify-content: center;
+}
+
+#password {
+  display: flex;
+  width: 80%;
+  height: 2.5rem;
+  border: none;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.LoginTemplate > button {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 5% auto;
+  color: white;
+  background-color: #7F5539;
+  border: none;
+  width: 30%;
+  height: 8%;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.LoginTemplate > a {
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+}
+
+.RegistrationTamplete {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 50vh;
+  margin: 5%;
+}
+
+.RegistrationTamplete > h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.RegistrationTamplete > p {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 5%;
+}
+
+.RegistrationTamplete > button {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 5% auto;
+  color: white;
+  background-color: #7F5539;
+  border: none;
+  width: 44%;
+  height: 10%;
+  font-size: 1.3rem;
+  font-weight: 600;
+}

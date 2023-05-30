@@ -3,12 +3,11 @@ import Main from "../../assets/Main.jpg"
 import About from "../../assets/About.jpg"
 import { Link } from "react-router-dom"
 import productsList from "../../data/productsList"
-import { CartContext } from "../../pages/Basket/CartContext"
 import { Footer } from "../../components"
-import { useContext } from "react"
+import { useCartContext } from "../Basket/CartContext.hooks"
 
 export const HomePage = () => {
-  const {addToCart} = useContext(CartContext);
+  const {addToCart} = useCartContext()
   return (
     <>
       <div className="HomeContainer">

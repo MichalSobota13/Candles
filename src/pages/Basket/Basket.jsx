@@ -1,20 +1,15 @@
 import React from "react";
 import "./Basket.css"
-import { useProductProps } from "../Product/Product.hooks";
-import { CartContext } from "./CartContext";
 import { Footer } from "../../components"
-import { useContext } from "react";
+import { useCartContext } from "./CartContext.hooks";
 
 export const Basket = () => {
-  const {items: products, decrease} = useContext(CartContext);
-
   const {
-    // product,
-    // decrease,
-    increase,
-    onChange,
-    // productCount
-  } = useProductProps()
+    items,
+    decreaseQty,
+    increaseQty,
+    removeProduct
+  } = useCartContext()
 
   return (
     <>
@@ -29,7 +24,7 @@ export const Basket = () => {
                 <th>Usuń</th>
               </tr>
             </thead>
-            {products.map((product, index) => (
+            {items.map((product, index) => (
               <React.Fragment key={`${index}-basket-product`}>
                 <tbody className="BasketTableBody">
                   <tr className="BasketTableValue">
@@ -43,11 +38,11 @@ export const Basket = () => {
                     <td className="BtnQAB">
                       <div className="BtnQABasket">
                         <div id="PQuantityBasket">
-                          <div className="BtnQtyBasket" onClick={() => decrease(product.id)}>
+                          <div className="BtnQtyBasket" onClick={() => decreaseQty(product.id)}>
                             <span className="BtnQtyMinusB" />
                           </div>
-                          <input type="text" name="qty" id="PQuantityWantedBasket" min="1" value={product.qty} onChange={(e) => onChange(e)} />
-                          <div className="BtnQtyBasket" onClick={increase}>
+                          <input type="text" name="qty" id="PQuantityWantedBasket" min="1" value={product.qty} onChange={() => {}} />
+                          <div className="BtnQtyBasket" onClick={() => increaseQty(product.id)}>
                             <span className="BtnQtyPlusB" />
                           </div>
                         </div>
@@ -63,12 +58,18 @@ export const Basket = () => {
                     </td>
 
                     <td className="ButtonDeleteItem">
-                      <button>X</button>
+                      <button onClick={() => removeProduct(product.id)}>X</button>
                     </td>
                   </tr>
                 </tbody>
               </React.Fragment>
             ))}
+            {/* zrobić miesjce z kodem rabatowym i podsumowaniem zamówienia 
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+            */}
           </table>
         </div>
       </div>

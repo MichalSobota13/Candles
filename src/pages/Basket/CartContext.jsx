@@ -1,37 +1,28 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
-export function CartProvider({children}) {
-  const [productCount, setProductCount] = useState(0);
-  const [items, setItems] = useState([]);
+export function CartProvider({ children }) {
+  const storageItems = window.localStorage.getItem('items')
+  const storageProductCount = window.localStorage.getItem('productCount')
 
-  const addToCart = (product, qty) => {
-    let index = items.findIndex(item => item.id === product.id)
-    if (index >= 0) {
-      let parsedItems = items
-      parsedItems[index] = { ...items[index], qty: items[index].qty + qty}
-      setItems(parsedItems)
-    } else {
-      setItems((prevState) => [...prevState, { ...product, qty }]);
-    }
-    setProductCount(productCount + qty)
-  };
+  const [items, setItems] = useState(storageItems ? JSON.parse(storageItems) : []);
+  const [productCount, setProductCount] = useState(storageProductCount ? JSON.parse(storageProductCount) : 0);
 
-  const decrease = (id) => {
-    let index = items.findIndex(item => item.id === id)
-    if (items[index].qty > 1) {
-      let parsedItems = items
-      parsedItems[index] = { ...items[index], qty: items[index].qty - 1}
-      setItems(parsedItems)
-    }
-  }
+  useEffect(() => {
+    window.localStorage.setItem('items', JSON.stringify(items))
+  }, [items, setItems])
+
+  useEffect(() => {
+    window.localStorage.setItem('productCount', JSON.stringify(productCount))
+  }, [productCount, setProductCount])
+
   return (
     <CartContext.Provider value={{
-      items,
       productCount,
-      addToCart,
-      decrease
+      setProductCount,
+      items,
+      setItems
     }}>
       {children}
     </CartContext.Provider>
