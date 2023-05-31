@@ -9,19 +9,30 @@ export const useCartContext = () => {
     setProductCount
   } = useContext(CartContext)
 
+  const checkDiscountPrice = (discountPrice, price) => {
+    return discountPrice === "" ?
+      price :
+      Number(discountPrice.replace(',', '.'))
+  }
+
+  const modifyItem = (item, qty) => {
+    return {
+      ...item,
+      qty,
+      value: Number((qty * checkDiscountPrice(item.discountPrice, item.numPrice)))
+    }
+  }
+
   const addToCart = (product, qty) => {
     let index = items.findIndex(item => item.id === product.id)
     if (index >= 0) {
       setItems(items.map(item => {
         if (item.id === product.id) {
-          return {
-            ...item,
-            qty: item.qty + qty  
-          }
+          return modifyItem(item, item.qty + qty)
         } else return item
       }))
     } else {
-      setItems((prevState) => [...prevState, { ...product, qty }]);
+      setItems((prevState) => [...prevState, modifyItem(product, qty)]);
     }
     setProductCount(productCount + qty)
   };
@@ -30,10 +41,8 @@ export const useCartContext = () => {
     setItems(items.map(item => {
       if (item.id === id) {
         setProductCount(productCount + 1)
-        return {
-          ...item,
-          qty: item.qty + 1
-        }
+        
+        return modifyItem(item, item.qty + 1)
       } else return item
     }))
   }
@@ -42,10 +51,8 @@ export const useCartContext = () => {
     setItems(items.map(item => {
       if (item.id === id && item.qty > 1) {
         setProductCount(productCount - 1)
-        return {
-          ...item,
-          qty: item.qty - 1
-        }
+
+        return modifyItem(item, item.qty - 1)
       } else return item
     }))
   }

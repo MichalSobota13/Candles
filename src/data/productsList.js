@@ -15,7 +15,7 @@ const List = [{
   name: "Soy Candle Rose",
   mainPrice: "89,00",
   numPrice: 89,
-  discountPrice: "79,00",
+  discountPrice: "69,99",
   img: productImg,
   rating: 4,
   date: "2020-03-26",

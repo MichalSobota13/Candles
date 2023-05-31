@@ -60,7 +60,11 @@ export const Basket = () => {
 
                     <td className="BasketValue">
                       <p>
-                        {(product.qty) * (product.discountPrice !== "" ? Number(product.discountPrice.replace(',', '.')) : product.numPrice)}
+                        {
+                          product.value % 1 !== 0 ?
+                          `${product.value.toFixed(2)}zł` :
+                          `${String(product.value)},00zł` 
+                        }
                       </p>
                     </td>
 
@@ -99,7 +103,14 @@ export const Basket = () => {
               <tbody>
                 <tr className="SummaryProducts">
                   <td id="SPV">Produkty</td>
-                  <td>Kwota</td>
+                  <td>
+                    {
+                      items.reduce((accumulator, currentValue) => {
+                        return accumulator + currentValue.value
+                      }, 0).toFixed(2)
+                    }zł
+                  {/* {((product.qty) * (product.discountPrice !== "" ? Number(product.discountPrice.replace(',', '.')) : product.numPrice) + product.items.length(value))} */}
+                  </td>
                 </tr>
                 <tr className="SummaryDelivery">
                   <td id="SPV">DOSTAWA</td>
