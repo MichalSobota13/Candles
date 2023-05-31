@@ -59,7 +59,9 @@ export const Basket = () => {
                     </td>
 
                     <td className="BasketValue">
-                      <p></p>
+                      <p>
+                        {(product.qty) * (product.discountPrice !== "" ? Number(product.discountPrice.replace(',', '.')) : product.numPrice)}
+                      </p>
                     </td>
 
                     <td className="ButtonDeleteItem">

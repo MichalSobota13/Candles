@@ -61,7 +61,8 @@ export const useCartContext = () => {
   const removeProductsAll = () => {
     setItems([])
     setProductCount(0)
-  } 
+  }
+
   return {
     items,
     addToCart,
