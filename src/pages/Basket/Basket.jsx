@@ -8,7 +8,8 @@ export const Basket = () => {
     items,
     decreaseQty,
     increaseQty,
-    removeProduct
+    removeProduct,
+    removeProductsAll
   } = useCartContext()
 
   return (
@@ -24,7 +25,7 @@ export const Basket = () => {
                 <th>Usuń</th>
               </tr>
             </thead>
-            {items.map((product, index) => (
+            {items.length > 0 && items.map((product, index) => (
               <React.Fragment key={`${index}-basket-product`}>
                 <tbody className="BasketTableBody">
                   <tr className="BasketTableValue">
@@ -46,7 +47,6 @@ export const Basket = () => {
                             <span className="BtnQtyPlusB" />
                           </div>
                         </div>
-                        {/* <button onClick={() => addToCart(product, productCount)} className="BtnAddBasket"></button> */}
                       </div>
                     </td>
 
@@ -64,13 +64,28 @@ export const Basket = () => {
                 </tbody>
               </React.Fragment>
             ))}
-            {/* zrobić miesjce z kodem rabatowym i podsumowaniem zamówienia 
-            <div>
-              <div></div>
-              <div></div>
-            </div>
-            */}
+
+            {items.length === 0 && <>
+            <tbody className="BasketTableBody EmptyBasketView">
+                <tr className="EmptyBasket">
+                  <td>
+                    Koszyk jest pusty                   
+                  </td>
+                </tr>
+            </tbody>
+            </>
+            }
           </table>
+
+          <div className="RabatAndDeleteView">
+            <div className="Rabat">
+              <input type="text" id="text" placeholder="Wpisz kod rabatowy" />
+              <button>Dodaj</button>
+            </div>
+            <div className="Delete">
+              <button onClick={() => removeProductsAll()}>Usuń wszystkie proukty</button>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

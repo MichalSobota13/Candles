@@ -58,12 +58,17 @@ export const useCartContext = () => {
     setProductCount(itemsCount)
   }
 
+  const removeProductsAll = () => {
+    setItems([])
+    setProductCount(0)
+  } 
   return {
     items,
     addToCart,
     decreaseQty,
     increaseQty,
     productCount,
-    removeProduct
+    removeProduct,
+    removeProductsAll
   }
 }

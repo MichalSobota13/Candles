@@ -10,6 +10,7 @@
   position: relative;
   background-color: white;
   display: flex;
+  flex-direction: column;
   width: 80vw;
 }
 
@@ -168,6 +169,55 @@
   background-color: white;
   color: black;
   border: 1px solid #ABABAB;
+}
+
+.EmptyBasketView {
+  width: 100%;
+  text-align: center;
+}
+
+.EmptyBasket {
+  width: 100%;
+  font-size: 2rem;
+  padding: 5% 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.RabatAndDeleteView {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5% auto;
+  font-size: 1rem;
+}
+
+.Rabat > input {
+  text-align: center;
+  width: 16rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.Rabat > button {
+  color: white;
+  background-color: #7F5539;
+  border: none;
+  height: auto;
+  width: 6rem;
+  height: 2.4rem;
+  font-weight: 700;
+}
+
+.Delete > button {
+  color: black;
+  background-color: white;
+  border: none;
+  text-decoration-line: underline;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 700px) {
