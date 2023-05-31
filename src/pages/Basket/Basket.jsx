@@ -21,7 +21,8 @@ export const Basket = () => {
               <tr className="BasketTableName">
                 <th>Nazwa</th>
                 <th>Ilość</th>
-                <th>Cena</th>
+                <th>Cena jedn.</th>
+                <th>Wartość</th>
                 <th>Usuń</th>
               </tr>
             </thead>
@@ -57,6 +58,10 @@ export const Basket = () => {
                       </p>
                     </td>
 
+                    <td className="BasketValue">
+                      <p></p>
+                    </td>
+
                     <td className="ButtonDeleteItem">
                       <button onClick={() => removeProduct(product.id)}>X</button>
                     </td>
@@ -85,6 +90,26 @@ export const Basket = () => {
             <div className="Delete">
               <button onClick={() => removeProductsAll()}>Usuń wszystkie proukty</button>
             </div>
+          </div>
+
+          <div className="SummaryOrder">
+            <table className="SummaryOrderTab">
+              <tbody>
+                <tr className="SummaryProducts">
+                  <td id="SPV">Produkty</td>
+                  <td>Kwota</td>
+                </tr>
+                <tr className="SummaryDelivery">
+                  <td id="SPV">DOSTAWA</td>
+                  <td>Kwota</td>
+                </tr>
+                <tr className="SummarySum">
+                  <td id="SPV">DO ZAPŁATY</td>
+                  <td>Kwota</td>
+                </tr>
+              </tbody>
+            </table>
+            <button>Przejdź do zamówienia</button>
           </div>
         </div>
       </div>
