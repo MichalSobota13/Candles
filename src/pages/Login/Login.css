@@ -52,6 +52,11 @@
   height: 8%;
   font-size: 1.3rem;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.LoginTemplate > button:hover{
+  background-color: #996537;
 }
 
 .LoginTemplate > a {
@@ -92,4 +97,9 @@
   height: 10%;
   font-size: 1.3rem;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.RegistrationTamplete > button:hover{
+  background-color: #996537;
 }

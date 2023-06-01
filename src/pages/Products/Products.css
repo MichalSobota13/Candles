@@ -37,13 +37,8 @@
 
 .FiltrProducts > label {
   font-size: 16px;
+  cursor: pointer;
 }
-
-/* TODO: use to style checkbox */
-/* .FiltrProducts > label > input {
-  width: 20px;
-  height: 20px;
-} */
 
 .FiltrProductsButton {
   background-color: #7F5539;
@@ -54,6 +49,11 @@
   margin-top: 30px;
   font-size: 16px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.FiltrProductsButton:hover {
+    background-color: #996537;
 }
 
 .LatestProducts {
@@ -151,6 +151,7 @@
   margin-bottom: 40px;
   width: 100px;
   display: block;
+  cursor: pointer;
 }
 
 .MainBannerProductsStructure {
@@ -204,7 +205,11 @@
   text-align: center;
   border: none;
   margin: 20px auto;
+  cursor: pointer;
+}
 
+.MainBannerProducts > button:hover {
+    background-color: #996537;
 }
 
 .MainBannerPageButtons {

@@ -109,7 +109,6 @@ export const Basket = () => {
                         return accumulator + currentValue.value
                       }, 0).toFixed(2)
                     }zł
-                  {/* {((product.qty) * (product.discountPrice !== "" ? Number(product.discountPrice.replace(',', '.')) : product.numPrice) + product.items.length(value))} */}
                   </td>
                 </tr>
                 <tr className="SummaryDelivery">

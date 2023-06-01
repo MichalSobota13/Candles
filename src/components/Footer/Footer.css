@@ -90,11 +90,17 @@
   border: none;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
+}
+
+.FooterNewsletter > button:hover{
+    background-color: #7F5539;
 }
 
 label {
   text-align: left;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 #privatPolicy {

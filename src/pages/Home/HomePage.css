@@ -153,6 +153,11 @@
   font-size: 12px;
   font-weight: 700;
   border: none;
+  cursor: pointer;
+}
+
+.MainContentLatest > div > button:hover{
+  background-color: #996537;
 }
 
 .MainAbout {

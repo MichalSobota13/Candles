@@ -129,6 +129,11 @@
   background-color: #7F5539;
   border: none;
   margin: 50px 20px ;
+  cursor: pointer;
+}
+
+.BtnAdd:hover {
+  background-color: #996537;
 }
 
 .ProductDescriptionBottom {
