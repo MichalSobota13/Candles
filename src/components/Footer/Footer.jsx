@@ -21,7 +21,7 @@ export const Footer = () => {
           <Link to="/">STRONA GŁÓWNA</Link>
           <Link to="/produkty">PRODUKTY</Link>
           <Link to="/o-nas">O NAS</Link>
-          <Link to="/kontakt">KONTAKT</Link>
+          <a href="#footer">KONTAKT</a>
         </div>
         <div className="FooterNewsletter">
           <h2>NEWSLETTER</h2>
@@ -30,7 +30,7 @@ export const Footer = () => {
           <button>Wyślij</button>
           <label>
             <input type="checkbox" name="checkbox" id="policy" />
-            Akceptuję <a href="" target={"_blank"} id="privatPolicy"><strong>politykę prywatności.</strong></a>
+            Akceptuję <a href="/" target={"_blank"} id="privatPolicy"><strong>politykę prywatności.</strong></a>
             </label>
           <p>Wyrażam zgodę na przetwarzanie danych Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
         </div>

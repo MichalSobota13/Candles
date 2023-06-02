@@ -1,7 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { HomePage, Layout, Products, Product, Basket, AboutUs, Login } from './pages';
-import { Footer } from './components';
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
         <Route path='produkty' element={<Products />} />
         <Route path='produkty/:id' element={<Product />} />
         <Route path='o-nas' element={<AboutUs />} />
-        <Route path='kontakt' element={<Footer />} />
         <Route path='koszyk' element={<Basket />} />
         <Route path='login' element={<Login />} />
       </Route>

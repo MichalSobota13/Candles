@@ -103,17 +103,17 @@ export const Products = () => {
             <div className="ProductsSorting">
               <label id="ViewSort">Sortowanie
                 <select id="ViewSortProducts">
-                  <option value='pro'>pro</option>
-                  <option value='pro2'>pro1</option>
-                  <option value='pro3'>pro2</option>
+                  <option value='pro'>Najnowsze</option>
+                  <option value='pro2'>Najniższa cena</option>
+                  <option value='pro3'>Najwyższa cena</option>
                 </select>
               </label>
 
               <label id="ViewSort">Pokaż
                 <select id="ViewSortElements">
-                  <option value='number'>number</option>
-                  <option value='number2'>number2</option>
-                  <option value='number3'>number3</option>
+                  <option value='number'>12</option>
+                  <option value='number2'>24</option>
+                  <option value='number3'>36</option>
                 </select>
               </label>
             </div>
