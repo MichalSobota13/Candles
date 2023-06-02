@@ -69,29 +69,35 @@
 
 .LatestProductsView {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-bottom: 8%;
 }
 
-.LatestProductsView > img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-}
-
-.LatestProductsView > span {
+.LatestProductsView > a {
   display: flex;
-  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.LatestProductsView > a > img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.LatestProductsView > a > span {
+  display: flex;
+  font-size: 1rem;
   font-weight: 600;
   flex-direction: column;
   margin-left: 10px;
-  width: 145px;
-  text-align: left;
 }
 
 .LatestProductsView > p {
-  font-size: 18px;
-  flex-direction: column;
-  margin-top: 30px;
+  display: flex;
+  font-size: 1rem;
+  justify-content: flex-end;
+  margin-top: -12%;
+  font-weight: 600;
 }
 
 .BestsellerProducts > h2 {
@@ -102,29 +108,35 @@
 
 .BestsellerProductsView {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-bottom: 8%;
 }
 
-.BestsellerProductsView > img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 20px;
-}
-
-.BestsellerProductsView > span {
+.BestsellerProductsView > a {
   display: flex;
-  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.BestsellerProductsView > a > img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.BestsellerProductsView > a > span {
+  display: flex;
+  font-size: 1rem;
   font-weight: 600;
   flex-direction: column;
   margin-left: 10px;
-  width: 145px;
-  text-align: left;
 }
 
 .BestsellerProductsView > p {
-  font-size: 18px;
-  flex-direction: column;
-  margin-top: 30px;
+  display: flex;
+  font-size: 1rem;
+  justify-content: flex-end;
+  margin-top: -12%;
+  font-weight: 600;
 }
 
 .MainBanner {

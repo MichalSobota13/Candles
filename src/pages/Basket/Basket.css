@@ -1,7 +1,7 @@
 .Basket {
   display: block;
   background-color: #EDE0D4;
-  width: 100vw;
+  width: auto;
   min-height: 60vh;
   padding: 150px 10vw;
 }
@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   width: 80vw;
+  padding: 2% 3%;
 }
 
 .BasketView > table {
@@ -25,13 +26,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-size: 18px;
+  font-size: 1.1rem;
 }
 
 .BasketTableBody {
   border: 1px solid #ABABAB;
   display: flex;
   flex-direction: row;
+  width: 80vw;
 }
 
 .BasketTableValue {
@@ -50,7 +52,7 @@
 .BasketTableValueName {
   width: 80%;
   height: auto;
-  margin: 6%;
+  margin: 5%;
   font-weight: 600;
   align-items: center;
   display: inline-flex;
@@ -64,7 +66,6 @@
 .BasketTableValueName > p {
   font-weight: 600;
   margin-left: 5%;
-  width: 60%;
 }
 
 .BtnQAB {
@@ -193,7 +194,7 @@
 }
 
 .RabatAndDeleteView {
-  width: 90%;
+  width: 99%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -259,7 +260,7 @@
 }
 
 .SummaryOrder > button {
-  width: 60%;
+  width: 75%;
   margin: 5% auto;
   color: white;
   background-color: #7F5539;
@@ -274,17 +275,54 @@
     background-color: #996537;
 }
 
+@media screen and (max-width: 1440px) {
+  .Basket {
+    display: block;
+    background-color: #EDE0D4;
+    width: auto;
+    min-height: 60vh;
+    padding: 10% auto;
+  }
+
+  .SummaryOrder {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 2% 5% 5% 60%;
+    text-align: center;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Rabat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Rabat > button {
+    margin-top: 3%;
+  }
+
+  .SummaryOrder {
+    width: 40vw;
+    margin: 2% 5% 5% 40%;    
+  }
+}
+
 @media screen and (max-width: 700px) {
   .Basket {
-    width: 90vw;
-    padding: 120px 0;
+    width: auto;
+    padding: 30% 3%;
   }
 
   .BasketView {
     position: relative;
     background-color: #FFF8F1;
     display: flex;
-    width: 95vw;
+    width: auto;
   }
 
   .BasketTableName {
@@ -292,6 +330,7 @@
   }
 
   .BasketTableBody {
+    width: auto;
     border-bottom: 1px solid #ABABAB;
     border-top: 1px solid #ABABAB;
     border-left: none;
@@ -306,9 +345,20 @@
   }
 
   .BasketTableValueName {
-    width: 100%;
+    width: auto;
     margin: 5%;
     font-weight: 700;
+    justify-content: space-between;
+    align-items:flex-start;
+  }
+
+  .BasketTableValueName > img {
+    width: 40%;
+  }
+  
+  .BasketTableValueName > p {
+    width: auto;
+    font-weight: 600;
   }
 
   .BtnQAB {
@@ -319,7 +369,7 @@
   }
 
   #PQuantityBasket {
-    width: 8rem;
+    width: auto;
     margin-bottom: 10%;
   }
 
@@ -333,7 +383,7 @@
   }
 
   #PQuantityWantedBasket {
-    width: 60px;
+    width: 40px;
     height: 40px;
     font-weight: 600;
     font-size: 1rem;
@@ -350,11 +400,25 @@
   }
 
   .BasketPrice {
-    position: relative;
-    margin: -110px 0 0 50px;
-    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    margin: auto;
+    margin-top: -30%;
+    font-size: 1.1rem;
     font-weight: 600;
     text-align: center;
+  }
+
+  .BasketValue {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 600;
+  }
+
+  .ButtonDeleteItem {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .ButtonDeleteItem > button {
@@ -363,8 +427,26 @@
     background-color: white;
     color: black;
     border: 1px solid #ABABAB;
-    margin-left: 30%;
     margin-bottom: 10%;
     font-size: larger;
+    font-weight: 700;
+  }
+
+  .RabatAndDeleteView {
+    flex-direction: column;
+  }
+  
+  .Rabat > button {
+    font-size: 1rem;
+  }
+  
+  .Delete > button {
+    background-color: #FFF8F1;
+    margin-top: 5%;
+  }
+  
+  .SummaryOrder {
+    width: auto;
+    margin: 2%;
   }
 }

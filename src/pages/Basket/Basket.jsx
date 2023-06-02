@@ -113,11 +113,17 @@ export const Basket = () => {
                 </tr>
                 <tr className="SummaryDelivery">
                   <td id="SPV">DOSTAWA</td>
-                  <td>Kwota</td>
+                  <td>Darmowa</td>
                 </tr>
                 <tr className="SummarySum">
                   <td id="SPV">DO ZAPŁATY</td>
-                  <td>Kwota</td>
+                  <td>
+                  {
+                      items.reduce((accumulator, currentValue) => {
+                        return accumulator + currentValue.value
+                      }, 0).toFixed(2)
+                    }zł
+                  </td>
                 </tr>
               </tbody>
             </table>

@@ -1,5 +1,4 @@
 import "./Products.css"
-import Product from "../../assets/Product.jpg"
 import { Link } from "react-router-dom"
 import productsList from "../../data/productsList"
 import { useCartContext } from ".."
@@ -62,20 +61,20 @@ export const Products = () => {
           <div className="LatestProducts">
             <h2>NAJNOWSZE PRODUKTY</h2>
 
-            <div className="LatestProductsView">
-              <img src={Product} alt="Product" />
-              <span>
-                Soy Candle
-                <p><del>99,00</del> 89,00zł</p>
-              </span>
-            </div>
-
-            <div className="LatestProductsView">
-              <img src={Product} alt="Product" />
-              <span>Soy Candle
-              <p>89,00zł</p>
-              </span>
-            </div>
+            {
+              productsList.filter(product => product.date === "2020-03-25").map(product => (
+                <div className="LatestProductsView" key={`${product.id}-latest`}>
+                  <Link to={`/produkty/${product.id}`}>
+                    <img src={product.img} alt="Product" />
+                    <span>{product.name}</span>
+                  </Link>
+                  <p>
+                    {product.discountPrice && <del>{product.mainPrice}</del>}
+                    {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł
+                  </p>
+                </div>
+              ))
+            }
           </div>
 
           <div className="BestsellerProducts">
@@ -84,13 +83,14 @@ export const Products = () => {
             {
               productsList.filter(product => product.rating >= 4).map(product => (
                 <div className="BestsellerProductsView" key={`${product.id}-bestseller`}>
-                  <img src={product.img} alt="Product" />
-                  <span>{product.name}
+                  <Link to={`/produkty/${product.id}`}>
+                    <img src={product.img} alt="Product" />
+                    <span>{product.name}</span>
+                  </Link>
                   <p>
                     {product.discountPrice && <del>{product.mainPrice}</del>}
                     {product.discountPrice ? ` ${product.discountPrice}` : product.mainPrice}zł
                   </p>
-                  </span>
                 </div>
               ))
             }

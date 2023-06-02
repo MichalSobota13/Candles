@@ -103,3 +103,95 @@
 .RegistrationTamplete > button:hover{
   background-color: #996537;
 }
+
+@media screen and (max-width: 1440px) {
+  .RegistrationTamplete > button {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .LoginPage {
+    min-height: 60vh;
+    padding-top: 15%;
+  }
+  
+  .LoginTemplate {
+    margin: 1%;
+  }
+  
+  #email {
+    width: 90%;
+    height: 2rem;
+  }
+  
+  #password {
+    width: 90%;
+    height: 2rem;
+  }
+  
+  .LoginTemplate > button {
+    width: 40%;
+    height: 7%;
+    font-size: 1.2rem;
+  }
+  
+  .LoginTemplate > a {
+    font-size: 0.9rem;
+  }
+  
+  .RegistrationTamplete {
+    width: 55%;
+    margin: 1%;
+  }
+  
+  .RegistrationTamplete > p {
+    font-size: 1.1rem;
+  }
+  
+  .RegistrationTamplete > button {
+    width: 50%;
+    height: 8%;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .RegistrationTamplete > p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .LoginPage {
+    flex-direction: column;
+    padding-top: 30%;
+  }
+  
+  .LoginTemplate {
+    width: 90%;
+    height: 40vh;
+    margin: auto;
+  }
+
+  .LoginTemplate > button {
+    width: 40%;
+    height: 9%;
+    font-size: 1.2rem;
+  }
+
+  .RegistrationTamplete {
+    width: 90%;
+    margin: 10% auto;
+  }
+  
+  .RegistrationTamplete > p {
+    font-size: 1.1rem;
+  }
+  
+  .RegistrationTamplete > button {
+    width: 70%;
+    height: 9%;
+    font-size: 1.2rem;
+  }
+}
