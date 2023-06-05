@@ -159,9 +159,16 @@
   font-weight: 700;
 }
 
-#ViewSort > #ViewSortElements, #ViewSortProducts {
+#ViewSort > #ViewSortProducts {
   margin-bottom: 40px;
-  width: 100px;
+  width: 140px;
+  display: block;
+  cursor: pointer;
+}
+
+#ViewSort > #ViewSortElements {
+  margin-bottom: 40px;
+  width: 90px;
   display: block;
   cursor: pointer;
 }

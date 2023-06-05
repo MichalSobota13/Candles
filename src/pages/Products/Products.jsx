@@ -1,4 +1,5 @@
 import "./Products.css"
+import { useState } from 'react'
 import { Link } from "react-router-dom"
 import productsList from "../../data/productsList"
 import { useCartContext } from ".."
@@ -6,6 +7,10 @@ import { Footer } from "../../components"
 
 export const Products = () => {
   const {addToCart} = useCartContext()
+
+  const [sort, setSort] = useState('pro')
+
+  const [filtr, setFiltr] = useState('4')
 
   return (
     <>
@@ -60,7 +65,6 @@ export const Products = () => {
 
           <div className="LatestProducts">
             <h2>NAJNOWSZE PRODUKTY</h2>
-
             {
               productsList.filter(product => product.date === "2020-03-25").map(product => (
                 <div className="LatestProductsView" key={`${product.id}-latest`}>
@@ -79,7 +83,6 @@ export const Products = () => {
 
           <div className="BestsellerProducts">
             <h2>BESTSELLERY</h2>
-
             {
               productsList.filter(product => product.rating >= 4).map(product => (
                 <div className="BestsellerProductsView" key={`${product.id}-bestseller`}>
@@ -102,25 +105,30 @@ export const Products = () => {
             
             <div className="ProductsSorting">
               <label id="ViewSort">Sortowanie
-                <select id="ViewSortProducts">
-                  <option value='pro'>Najnowsze</option>
-                  <option value='pro2'>Najniższa cena</option>
-                  <option value='pro3'>Najwyższa cena</option>
+                <select id="ViewSortProducts" value={sort} onChange={(e) => setSort(e.target.value)}>
+                  <option value='pro'>Najniższa cena</option>
+                  <option value='pro2'>Najwyższa cena</option>
                 </select>
               </label>
 
               <label id="ViewSort">Pokaż
-                <select id="ViewSortElements">
-                  <option value='number'>12</option>
-                  <option value='number2'>24</option>
-                  <option value='number3'>36</option>
+                <select id="ViewSortElements" value={filtr} onChange={(e) => setFiltr(e.target.value)}>
+                  <option value="4">4</option>
+                  <option value="8">8</option>
+                  <option value="12">12</option>
                 </select>
               </label>
             </div>
 
             <div className="MainBannerProductsStructure">
               {
-                productsList.map((product) => (
+                productsList.sort((a, b) => {
+                  if (sort === 'pro') {
+                    return a.numPrice - b.numPrice
+                  } else {
+                    return b.numPrice - a.numPrice
+                  }
+                }).slice(0, filtr || undefined).map((product) => (
                   <div className="MainBannerProducts" key={product.id}>
                     <Link to={`/produkty/${product.id}`}>
                       <img src={product.img} alt="Product" />
