@@ -4,7 +4,7 @@
   width: 100vw;
   min-height: 80vh;
   padding-top: 10%;
-  background-color: #EDE0D4;
+  background-color: #ede0d4;
 }
 
 .LoginTemplate {
@@ -13,7 +13,7 @@
   width: 40%;
   height: 50vh;
   margin: 5%;
-  border: 1px solid #ABABAB;
+  border: 1px solid #ababab;
 }
 
 .LoginTemplate > h2 {
@@ -46,7 +46,7 @@
   justify-content: center;
   margin: 5% auto;
   color: white;
-  background-color: #7F5539;
+  background-color: #7f5539;
   border: none;
   width: 30%;
   height: 8%;
@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 
-.LoginTemplate > button:hover{
+.LoginTemplate > button:hover {
   background-color: #996537;
 }
 
@@ -91,7 +91,7 @@
   justify-content: center;
   margin: 5% auto;
   color: white;
-  background-color: #7F5539;
+  background-color: #7f5539;
   border: none;
   width: 44%;
   height: 10%;
@@ -100,7 +100,7 @@
   cursor: pointer;
 }
 
-.RegistrationTamplete > button:hover{
+.RegistrationTamplete > button:hover {
   background-color: #996537;
 }
 
@@ -115,40 +115,40 @@
     min-height: 60vh;
     padding-top: 15%;
   }
-  
+
   .LoginTemplate {
     margin: 1%;
   }
-  
+
   #email {
     width: 90%;
     height: 2rem;
   }
-  
+
   #password {
     width: 90%;
     height: 2rem;
   }
-  
+
   .LoginTemplate > button {
     width: 40%;
     height: 7%;
     font-size: 1.2rem;
   }
-  
+
   .LoginTemplate > a {
     font-size: 0.9rem;
   }
-  
+
   .RegistrationTamplete {
     width: 55%;
     margin: 1%;
   }
-  
+
   .RegistrationTamplete > p {
     font-size: 1.1rem;
   }
-  
+
   .RegistrationTamplete > button {
     width: 50%;
     height: 8%;
@@ -167,7 +167,7 @@
     flex-direction: column;
     padding-top: 30%;
   }
-  
+
   .LoginTemplate {
     width: 90%;
     height: 40vh;
@@ -184,11 +184,11 @@
     width: 90%;
     margin: 10% auto;
   }
-  
+
   .RegistrationTamplete > p {
     font-size: 1.1rem;
   }
-  
+
   .RegistrationTamplete > button {
     width: 70%;
     height: 9%;

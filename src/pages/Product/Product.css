@@ -3,7 +3,7 @@
   flex-direction: row;
   height: 80vh;
   width: 100vw;
-  background-color: #FFF8F1;
+  background-color: #fff8f1;
 }
 
 .ProductView {
@@ -86,7 +86,7 @@
 }
 
 .BtnQtyMinus::after {
-  content: '\2212';
+  content: "\2212";
   position: absolute;
   top: 0;
   right: 7.8px;
@@ -106,7 +106,7 @@
 }
 
 .BtnQtyPlus::before {
-  content: '\002B';
+  content: "\002B";
   position: absolute;
   top: 0;
   left: 7.3px;
@@ -126,9 +126,9 @@
   font-weight: 600;
   align-items: center;
   color: white;
-  background-color: #7F5539;
+  background-color: #7f5539;
   border: none;
-  margin: 50px 20px ;
+  margin: 50px 20px;
   cursor: pointer;
 }
 
@@ -189,7 +189,7 @@
     font-weight: 600;
     margin-left: 20px;
   }
-  
+
   .ProductViewDescription > span > p {
     font-size: 20px;
   }
@@ -265,7 +265,7 @@
     margin-left: 20px;
     text-align: left;
   }
-  
+
   .ProductViewDescription > span > p {
     font-size: 20px;
   }

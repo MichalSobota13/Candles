@@ -1,4 +1,4 @@
-.Header{
+.Header {
   width: 100vw;
   height: 86px;
   background-color: white;
@@ -6,7 +6,7 @@
   z-index: 10;
 }
 
-.Navbar{
+.Navbar {
   width: 80%;
   height: 100%;
   margin: 0 auto;
@@ -14,7 +14,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-  
+
 .Logo > a {
   height: 100%;
   width: 86px;
@@ -27,10 +27,9 @@
   position: absolute;
   top: -14px;
   left: -15px;
-
 }
-  
-.Navigation{
+
+.Navigation {
   height: 100%;
   width: 50%;
   display: flex;
@@ -38,8 +37,8 @@
   justify-content: space-between;
   align-items: center;
 }
-  
-.NavLinks{
+
+.NavLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -47,15 +46,19 @@
   height: 100%;
   width: 85%;
 }
-  
+
 .NavLinks > a {
   text-decoration: none;
   color: black;
   font-size: 17px;
   font-weight: bold;
 }
-  
-.NavIcons{
+
+.NavLinks > a:hover {
+  background-color: #ede0d4;
+}
+
+.NavIcons {
   width: 100px;
   margin-left: 25px;
   font-size: 25px;
@@ -73,12 +76,12 @@
   font-size: smaller;
 }
 
-.Burger{
+.Burger {
   display: none;
   font-size: 25px;
 }
 
-.Burger div{
+.Burger div {
   width: 25px;
   height: 3px;
   background-color: black;
@@ -90,59 +93,59 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .Header{
+  .Header {
     height: 80px;
   }
 
-  .Navbar{
+  .Navbar {
     width: 100%;
     margin: 0;
   }
 
-  .Navigation{
+  .Navigation {
     width: 60vw;
   }
-  
+
   .Logo > img {
     top: -18px;
     left: -15px;
   }
 
-  .NavIcons{
+  .NavIcons {
     margin-right: 10px;
-  }  
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  .Header{
+  .Header {
     height: 80px;
   }
 
-  .Navbar{
+  .Navbar {
     width: 100%;
     margin: 0;
   }
 
-  .Navigation{
+  .Navigation {
     width: 70vw;
   }
-  
+
   .Logo > img {
     top: -18px;
     left: -15px;
   }
 
-  .NavIcons{
+  .NavIcons {
     margin-right: 10px;
-  }   
+  }
 }
-  
+
 @media screen and (max-width: 768px) {
-  .Header{
+  .Header {
     height: 70px;
   }
 
-  .Logo{
+  .Logo {
     margin-left: 5px;
   }
 
@@ -151,22 +154,22 @@
     left: -17px;
   }
 
-  .Navigation{
+  .Navigation {
     width: 75%;
   }
 
-  .NavIcons{
+  .NavIcons {
     margin-right: 10px;
-  }  
+  }
 }
 
 @media screen and (max-width: 700px) {
-  .Header{
+  .Header {
     height: 80px;
     width: 100%;
   }
 
-  .Navbar{
+  .Navbar {
     margin: 0;
     position: relative;
     justify-content: center;
@@ -191,7 +194,7 @@
     display: none;
   }
 
-  .Burger{
+  .Burger {
     display: block;
   }
 
@@ -218,7 +221,7 @@
   }
 
   .Menu a:hover {
-    background-color: #EDE0D4;
+    background-color: #ede0d4;
     border-radius: 9px;
     width: 90%;
     text-align: center;

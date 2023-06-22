@@ -51,7 +51,7 @@
 }
 
 .ButtonHome {
-  background-color: #B08968;
+  background-color: #b08968;
   color: white;
   width: 370px;
   height: 70px;
@@ -77,13 +77,13 @@
   margin-top: 60px;
 }
 
-.NextBanner > div:last-child{
-  background-color: #B08968;
+.NextBanner > div:last-child {
+  background-color: #b08968;
 }
 
 .MainContent {
-  background-color: #EDE0D4;
-  position:relative;
+  background-color: #ede0d4;
+  position: relative;
   flex-direction: column;
   width: 100vw;
   min-height: 70vh;
@@ -131,7 +131,7 @@
   font-size: 18.5px;
   font-weight: 500;
   text-align: center;
-  color: #7F5539;
+  color: #7f5539;
 }
 
 .MainContentLatest > div > p {
@@ -149,19 +149,19 @@
   color: white;
   align-items: center;
   margin: auto;
-  background-color: #7F5539;
+  background-color: #7f5539;
   font-size: 12px;
   font-weight: 700;
   border: none;
   cursor: pointer;
 }
 
-.MainContentLatest > div > button:hover{
+.MainContentLatest > div > button:hover {
   background-color: #996537;
 }
 
 .MainAbout {
-  background-color: #EDE0D4;
+  background-color: #ede0d4;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
@@ -175,7 +175,7 @@
 }
 
 .MainAboutText {
-  background-color: #B08968;
+  background-color: #b08968;
   width: 70vw;
   margin: auto;
   text-align: center;
@@ -215,7 +215,7 @@
     height: 48px;
     margin-top: 30px;
   }
-  
+
   .NextBanner {
     width: 200px;
   }
@@ -229,7 +229,7 @@
   .MainContent {
     min-height: 110vh;
   }
-  
+
   .MainContentLatest {
     width: 97%;
   }
@@ -238,7 +238,7 @@
     padding-top: 50px;
     width: 80vw;
   }
-  
+
   .MainAboutText {
     width: 80vw;
   }
@@ -266,7 +266,7 @@
   .NextBanner {
     width: 140px;
   }
-  
+
   .NextBanner > div {
     margin-top: 30px;
     width: 18px;
@@ -280,38 +280,38 @@
   .MainContent > h2 {
     margin-top: 60px;
   }
-  
+
   .MainContentLatest {
     width: 97%;
   }
-  
-  .MainContentLatest > div  {
+
+  .MainContentLatest > div {
     height: 310px;
     width: 170px;
     padding-bottom: 20px;
   }
-  
+
   .MainContentLatest > div > a {
     height: 220px;
     width: 170px;
   }
-  
+
   .MainContentLatest > div > a > img {
     height: 160px;
     width: 170px;
   }
-  
+
   .MainContentLatest > div > a > span {
     width: 170px;
     margin-top: 7px;
   }
-  
+
   .MainContentLatest > div > p {
     height: 20px;
     width: 170px;
     margin-top: 0;
   }
-  
+
   .MainContentLatest > div > button {
     height: 38px;
     width: 130px;
@@ -356,7 +356,7 @@
     margin-top: 15px;
     font-size: 11px;
   }
-  
+
   .NextBanner {
     width: 120px;
   }
@@ -375,7 +375,7 @@
     margin-top: 100px;
   }
 
-  .MainContent > h2:first-child{
+  .MainContent > h2:first-child {
     margin-top: 50px;
   }
 
@@ -387,23 +387,23 @@
     height: 220px;
     width: 160px;
   }
-  
+
   .MainContentLatest > div > a > img {
     height: 160px;
     width: 160px;
   }
-  
+
   .MainContentLatest > div > a > span {
     width: 160px;
     margin-top: 7px;
   }
-  
+
   .MainContentLatest > div > p {
     height: 20px;
     width: 160px;
     margin-top: 0;
   }
-  
+
   .MainContentLatest > div > button {
     height: 38px;
     width: 130px;
@@ -414,11 +414,11 @@
   .MainAbout {
     padding: 50px 0;
   }
-  
+
   .MainAbout > img {
     width: 90%;
   }
-  
+
   .MainAboutText {
     width: 90vw;
   }
@@ -435,14 +435,14 @@
   .Banner {
     width: 100vw;
     height: 70vh;
-    background-color: #7F5539;
+    background-color: #7f5539;
     color: white;
   }
-  
+
   .Banner > img {
     display: none;
   }
-  
+
   .BannerContent {
     width: 90%;
     margin: auto;
@@ -463,13 +463,13 @@
   .BannerContent > p {
     display: block;
     width: 90%;
-    margin: auto;  
+    margin: auto;
   }
 
   .ButtonHome {
     display: none;
   }
-  
+
   .NextBanner {
     display: none;
   }
@@ -483,7 +483,7 @@
     margin-top: 80px;
   }
 
-  .MainContent > h2:first-child{
+  .MainContent > h2:first-child {
     margin-top: 60px;
   }
 
@@ -505,24 +505,24 @@
     height: 350px;
     width: 300px;
   }
-  
+
   .MainContentLatest > div > a > img {
     height: 300px;
     width: 300px;
   }
-  
+
   .MainContentLatest > div > a > span {
     width: 300px;
     font-size: 1.7rem;
     margin-top: 7px;
   }
-  
+
   .MainContentLatest > div > p {
     width: 300px;
     font-size: 1.5rem;
     margin: 0;
   }
-  
+
   .MainContentLatest > div > button {
     height: 40px;
     width: 220px;
@@ -533,11 +533,11 @@
   .MainAbout {
     padding: 50px 0;
   }
-  
+
   .MainAbout > img {
     display: none;
-    }
-  
+  }
+
   .MainAboutText {
     width: 90vw;
   }

@@ -3,7 +3,7 @@
   flex-direction: row;
   width: 100vw;
   min-height: 100vh;
-  background-color: #FFF8F1;
+  background-color: #fff8f1;
 }
 
 .LeftBanner {
@@ -41,7 +41,7 @@
 }
 
 .FiltrProductsButton {
-  background-color: #7F5539;
+  background-color: #7f5539;
   border: none;
   color: white;
   height: 40px;
@@ -53,7 +53,7 @@
 }
 
 .FiltrProductsButton:hover {
-    background-color: #996537;
+  background-color: #996537;
 }
 
 .LatestProducts {
@@ -179,7 +179,6 @@
   flex-wrap: wrap;
   gap: 0 1%;
   justify-content: space-around;
-
 }
 
 .MainBannerProducts {
@@ -217,7 +216,7 @@
 .MainBannerProducts > button {
   width: 200px;
   height: 40px;
-  background-color: #7F5539;
+  background-color: #7f5539;
   color: white;
   font-size: 12px;
   font-weight: 700;
@@ -228,7 +227,7 @@
 }
 
 .MainBannerProducts > button:hover {
-    background-color: #996537;
+  background-color: #996537;
 }
 
 .MainBannerPageButtons {
@@ -243,7 +242,7 @@
 .ProductsPage {
   width: 32px;
   height: 32px;
-  background-color: #B7B7B7;
+  background-color: #b7b7b7;
   border: none;
   color: white;
   font-size: 16px;
@@ -254,7 +253,7 @@
   background-color: black;
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
   .LeftBanner {
     margin-top: 10%;
     margin-left: 5%;
@@ -273,10 +272,9 @@
   .MainBannerProductsStructure {
     gap: 0 1%;
     justify-content: space-around;
-
   }
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .LeftBanner {
     width: 230px;
     margin-top: 10%;
@@ -303,7 +301,7 @@
     justify-content: space-around;
   }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .LeftBanner {
     width: 180px;
     margin-top: 10%;
@@ -316,7 +314,7 @@
   }
 
   .FiltrProductsButton {
-    background-color: #7F5539;
+    background-color: #7f5539;
     border: none;
     color: white;
     height: 35px;
@@ -340,7 +338,7 @@
     gap: 0 1%;
   }
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .LeftBanner {
     display: none;
   }
