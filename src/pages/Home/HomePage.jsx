@@ -5,35 +5,54 @@ import { Link } from "react-router-dom";
 import productsList from "../../data/productsList";
 import { Footer } from "../../components";
 import { useCartContext } from "../Basket/CartContext.hooks";
+import { motion } from "framer-motion";
+import { pictureAnim, containerAnim, pageAnim } from "../../Animation";
 
 export const HomePage = () => {
   const { addToCart } = useCartContext();
 
   return (
-    <>
+    <motion.div
+      variants={pageAnim}
+      initial="hidden"
+      animate="show">
       <div className="HomeContainer">
         <div className="Banner">
           <img
             src={Main}
-            alt="alal"
+            alt="banner"
           />
-          <div className="BannerContent">
-            <h1>API CANDLES</h1>
-            <span>
+          <motion.div
+            variants={containerAnim}
+            initial="hidden"
+            animate="show"
+            className="BannerContent">
+            <motion.h1 variants={pictureAnim}>API CANDLES</motion.h1>
+            <motion.span variants={pictureAnim}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              <p>Diam dictum nulla nullam amet morbi eros id fringilla.</p>
-            </span>
-            <p>Sed quis morbi dictum aliquam tristique quis euismod id.</p>
-            <button className="ButtonHome">DOWIEDZ SIĘ WIĘCEJ</button>
-            <div className="NextBanner">
-              {/* <div></div>
+              <motion.p variants={pictureAnim}>
+                Diam dictum nulla nullam amet morbi eros id fringilla.
+              </motion.p>
+            </motion.span>
+            <motion.p variants={pictureAnim}>
+              Sed quis morbi dictum aliquam tristique quis euismod id.
+            </motion.p>
+            <motion.button
+              className="ButtonHome"
+              variants={pictureAnim}>
+              DOWIEDZ SIĘ WIĘCEJ
+            </motion.button>
+            <motion.div
+              variants={pictureAnim}
+              className="NextBanner">
               <div></div>
               <div></div>
               <div></div>
               <div></div>
-              <div></div> */}
-            </div>
-          </div>
+              <div></div>
+              <div></div>
+            </motion.div>
+          </motion.div>
         </div>
 
         <div className="MainContent">
@@ -120,6 +139,6 @@ export const HomePage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </motion.div>
   );
 };

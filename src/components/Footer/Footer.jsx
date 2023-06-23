@@ -2,16 +2,15 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo-api-white.svg";
 
-// TODO: create new reusible component
-// const NavLinks = ({ headerText }) => (
-//   <>
-//     {!!headerText && <h2>{headerText}</h2>}
-//     <Link to="/">STRONA GŁÓWNA</Link>
-//     <Link to="/produkty">PRODUKTY</Link>
-//     <Link to="/o-nas">O NAS</Link>
-//     <a href="#footer">KONTAKT</a>
-//   </>
-// );
+export const NavLinks = ({ headerText }) => (
+  <>
+    {!!headerText && <h2>{headerText}</h2>}
+    <Link to="/">STRONA GŁÓWNA</Link>
+    <Link to="/produkty">PRODUKTY</Link>
+    <Link to="/o-nas">O NAS</Link>
+    <a href="#footer">KONTAKT</a>
+  </>
+);
 
 export const Footer = () => {
   return (
@@ -32,12 +31,7 @@ export const Footer = () => {
           <p>31-621 Kraków</p>
         </div>
         <div className="FooterNavLinks">
-          {/* <NavLinks headerText={"NAWIGACJA"} /> */}
-          <h2>NAWIGACJA</h2>
-          <Link to="/">STRONA GŁÓWNA</Link>
-          <Link to="/produkty">PRODUKTY</Link>
-          <Link to="/o-nas">O NAS</Link>
-          <a href="#footer">KONTAKT</a>
+          <NavLinks headerText={"NAWIGACJA"} />
         </div>
         <div className="FooterNewsletter">
           <h2>NEWSLETTER</h2>

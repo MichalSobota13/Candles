@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/logo-api-black.svg";
 import { useState } from "react";
 import { useCartContext } from "../../pages";
+import { NavLinks } from "../Footer/Footer";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
@@ -27,10 +28,7 @@ export const Header = () => {
         </div>
         <div className="Navigation">
           <div className="NavLinks">
-            <Link to="/">STRONA GŁÓWNA</Link>
-            <Link to="/produkty">PRODUKTY</Link>
-            <Link to="/o-nas">O NAS</Link>
-            <a href="#footer">KONTAKT</a>
+            <NavLinks />
           </div>
           <div className="NavIcons">
             <Link to="/koszyk">
@@ -52,10 +50,7 @@ export const Header = () => {
       </div>
       {open && (
         <div className="Menu">
-          <Link to="/">STRONA GŁÓWNA</Link>
-          <Link to="/produkty">PRODUKTY</Link>
-          <Link to="/o-nas">O NAS</Link>
-          <a href="#footer">KONTAKT</a>
+          <NavLinks />
         </div>
       )}
     </div>
