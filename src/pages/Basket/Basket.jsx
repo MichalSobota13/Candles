@@ -2,18 +2,13 @@ import React from "react";
 import "./Basket.css";
 import { Footer } from "../../components";
 import { useCartContext } from "./CartContext.hooks";
-import { motion } from "framer-motion";
-import { pageAnim } from "../../Animation";
 
 export const Basket = () => {
   const { items, decreaseQty, increaseQty, removeProduct, removeProductsAll } =
     useCartContext();
 
   return (
-    <motion.div
-      variants={pageAnim}
-      initial="hidden"
-      animate="show">
+    <>
       <div className="Basket">
         <div className="BasketView">
           <table>
@@ -159,6 +154,6 @@ export const Basket = () => {
         </div>
       </div>
       <Footer />
-    </motion.div>
+    </>
   );
 };

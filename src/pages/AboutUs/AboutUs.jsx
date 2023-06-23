@@ -3,6 +3,7 @@ import About from "../../assets/About.jpg";
 import { Footer } from "../../components";
 import React from "react";
 import { motion } from "framer-motion";
+import { imageAnim } from "../../Animation";
 
 export const AboutUs = () => {
   return (
@@ -13,8 +14,9 @@ export const AboutUs = () => {
           className="AboutUsContainer"
           id="aboutUs">
           <motion.img
-            animate={{ opacity: 1, transition: { duration: 2 } }}
-            initial={{ opacity: 0 }}
+            variants={imageAnim}
+            initial="hidden"
+            animate="show"
             src={About}
             alt="about"
           />
