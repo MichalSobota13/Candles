@@ -4,13 +4,18 @@ import { Link } from "react-router-dom";
 import productsList from "../../data/productsList";
 import { useCartContext } from "..";
 import { Footer } from "../../components";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 export const Products = () => {
   const { addToCart } = useCartContext();
 
-  const [sort, setSort] = useState("pro");
+  const [sort, setSort] = useState("");
 
-  const [filtr, setFiltr] = useState("4");
+  const [filtr, setFiltr] = useState("");
 
   return (
     <>
@@ -130,30 +135,58 @@ export const Products = () => {
             Ipsum.
           </p>
 
-          <div className="ProductsSorting">
-            <label id="ViewSort">
-              Sortowanie
-              <select
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}>
+            <FormControl
+              className="ProductsSorting"
+              sx={{
+                m: 1,
+                minWidth: 150,
+                backgroundColor: "white",
+                textAlign: "center",
+              }}
+              size="small">
+              <InputLabel id="ViewSort">Sortowanie</InputLabel>
+              <Select
+                sx={{ p: 0, m: 0 }}
+                labelId="ViewSort"
                 id="ViewSortProducts"
                 value={sort}
+                autoWidth
+                label="Sortowanie"
                 onChange={(e) => setSort(e.target.value)}>
-                <option value="pro">Najniższa cena</option>
-                <option value="pro2">Najwyższa cena</option>
-              </select>
-            </label>
+                <MenuItem value="pro">Najniższa cena</MenuItem>
+                <MenuItem value="pro2">Najwyższa cena</MenuItem>
+              </Select>
+            </FormControl>
 
-            <label id="ViewSort">
-              Pokaż
-              <select
+            <FormControl
+              className="ProductsSorting"
+              sx={{
+                m: 1,
+                minWidth: 100,
+                backgroundColor: "white",
+                textAlign: "center",
+              }}
+              size="small">
+              <InputLabel id="ViewSort">Pokaż</InputLabel>
+              <Select
+                labelId="ViewSort"
                 id="ViewSortElements"
                 value={filtr}
+                label="Pokaż"
+                autoWidth
                 onChange={(e) => setFiltr(e.target.value)}>
-                <option value="4">4</option>
-                <option value="8">8</option>
-                <option value="12">12</option>
-              </select>
-            </label>
-          </div>
+                <MenuItem value="4">4</MenuItem>
+                <MenuItem value="8">8</MenuItem>
+                <MenuItem value="12">12</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
 
           <div className="MainBannerProductsStructure">
             {productsList
@@ -190,13 +223,13 @@ export const Products = () => {
               ))}
           </div>
 
-          <div className="MainBannerPageButtons">
+          {/* <div className="MainBannerPageButtons">
             <button className="ProductsPage">1</button>
             <button className="ProductsPage">2</button>
             <button className="ProductsPage">3</button>
             <button className="ProductsPage">4</button>
             <button className="ProductsPage">5</button>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

@@ -151,28 +151,6 @@
   font-size: 16px;
 }
 
-.ProductsSorting {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-#ViewSort > #ViewSortProducts {
-  margin-bottom: 40px;
-  width: 140px;
-  display: block;
-  cursor: pointer;
-}
-
-#ViewSort > #ViewSortElements {
-  margin-bottom: 40px;
-  width: 90px;
-  display: block;
-  cursor: pointer;
-}
-
 .MainBannerProductsStructure {
   display: flex;
   flex-direction: row;

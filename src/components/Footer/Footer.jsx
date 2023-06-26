@@ -42,7 +42,7 @@ export const Footer = () => {
             placeholder="Wpisz adres e-mail"
           />
           <button>Wyślij</button>
-          <label>
+          <label className="label">
             <input
               type="checkbox"
               name="checkbox"

@@ -43,14 +43,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   height: 100%;
   width: 85%;
+  text-decoration: none;
+  list-style: none;
 }
 
 .NavLinks > a {
   text-decoration: none;
   color: black;
-  font-size: 17px;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -103,7 +106,7 @@
   }
 
   .Navigation {
-    width: 60vw;
+    width: 65vw;
   }
 
   .Logo > img {
@@ -127,7 +130,7 @@
   }
 
   .Navigation {
-    width: 70vw;
+    width: 75vw;
   }
 
   .Logo > img {
@@ -142,7 +145,7 @@
 
 @media screen and (max-width: 768px) {
   .Header {
-    height: 70px;
+    height: 80px;
   }
 
   .Logo {
@@ -155,7 +158,7 @@
   }
 
   .Navigation {
-    width: 75%;
+    width: 85%;
   }
 
   .NavIcons {
@@ -170,13 +173,13 @@
   }
 
   .Navbar {
+    display: flex;
     margin: 0;
-    position: relative;
-    justify-content: center;
   }
 
   .Logo {
-    margin: 0;
+    justify-content: center;
+    margin-left: 40%;
   }
 
   .Logo > img {
